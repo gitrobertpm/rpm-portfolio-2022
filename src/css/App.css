@@ -1,0 +1,103 @@
+
+.App {
+  text-align: center;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 0 0 5px;
+  background: rgba(0, 0, 10, 0.95);
+  z-index: 999;
+}
+
+
+.App-header {
+  background-color: #282c34;
+  background-image: url('../img/wallpaper.png');
+  background-repeat: repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-header h2 {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.header-contact-link-box {
+  position: relative;
+  perspective: 750px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+.header-contact-link-box a {
+  width: 33px;
+  height: 33px;
+  margin: auto;
+}
+
+.header-contact-link-box a:nth-of-type(1) {
+  margin-top: 5px;
+  height: 25px;
+  padding-bottom: 5px;
+}
+
+.header-contact-link-box a:hover {
+  border-bottom-color: rgba(0, 191, 255, 0.7);
+}
+
+.header-contact-link-box img {
+  width: 100%;
+}
+
+.rainbow {
+  background-image: linear-gradient(to left, red, 20%, orange, 35%, gold, orange, 80%, red);
+  background-image: linear-gradient(to left, dodgerblue, deepskyblue, lightblue, deepskyblue, dodgerblue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 900;
+}
+
+.main-js-logo {
+  background: white;
+  border-radius: 2px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  filter: drop-shadow(1px 1px 25px rgba(255, 217, 0, 0.9));
+}
+
+.down-arrow {
+  position: absolute;
+  bottom: 0px;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 25px solid transparent;
+  border-top-color: deepskyblue;
+  animation: scrollCall 2s ease-out infinite;
+}
+
+@keyframes scrollCall {
+  0% {border-top-color: deepskyblue; bottom: 0px;}
+  50% {border-top-color: tomato; bottom: 15px;}
+  100% {border-top-color: deepskyblue; bottom: 0px;}
+}
+
+.top-heading {
+  max-width: 300px;
+  margin: 15px auto;
+  padding: 15px auto;
+  background: rgba(250, 250, 250, 0.7);
+  text-shadow: 1px 1px 0 rgba(250, 250, 250, 0.5);
+  border-radius: 3px 3px 0 0;
+}

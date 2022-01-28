@@ -1,0 +1,420 @@
+
+.about-container a {
+  position: relative;
+  perspective: 750px;
+  display: inline-block;
+  padding-top: 7px;
+}
+
+.about-container .active {
+  color: deepskyblue;
+}
+
+.about-container a:hover {
+  color: tomato;
+}
+
+.about-container {
+  min-height: 100vh;
+  padding-top: 35px;
+  padding-bottom: 25px;
+  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0.95) 75%, transparent 75%);
+  background-attachment: fixed;
+}
+
+.about-header {
+  position: relative;
+  max-width: 840px;
+  margin: auto;
+  padding-top: 125px;
+  padding-bottom: 0;
+  z-index: 9;
+}
+
+.about-header .header-contact-link-box {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 125px;
+  margin: 15px auto;
+}
+
+.about-header .header-contact-link-box a {
+  min-width: 42px;
+  width: 42px;
+  height: 42px;
+  margin: auto;
+  background: none;
+  box-shadow: none;
+  filter: drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9));
+  filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.99));
+  border-bottom: 1px solid transparent;
+}
+
+.about-header .header-contact-link-box a:hover {
+  border-bottom-color: rgba(0, 191, 255, 0.7);
+}
+
+.about-header .header-contact-link-box img {
+  width: 100%;
+}
+
+.quote-box {
+  max-width: 1024px;
+  margin: 25px auto 35px;
+}
+
+.quote-heading {
+  color: tomato;
+  font-size: 1.1rem;
+  max-width: 525px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+}
+
+.quote-display {
+  cursor: pointer;
+  max-width: 788px;
+  margin: auto;
+  padding: 25px;
+  padding-bottom: 42px;
+  padding-left: 25px;
+  background:rgba(0, 0, 10, 0.9);
+  border-bottom: 2px solid rgba(0, 191, 255, 0.7);
+}
+
+.quote {
+  position: relative;
+  text-align: justify;
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  color: white;
+}
+
+.quote::before {
+  position: absolute;
+  margin-left: -15px;
+  content: '"';
+}
+
+.quote::after {
+  content: '"';
+}
+
+.citation {
+  float: right;
+  color: rgba(0, 191, 255, 0.9);
+  font-size: 1.1rem;
+  margin-top: 5px;
+}
+
+.about-menu {
+  position: fixed;
+  top: 43px;
+  width: 100%;
+  margin: 0px auto 50px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background:rgba(0, 0, 10, 0.9);
+  border-bottom: 3px solid rgba(0, 191, 255, 0.7);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  z-index: 999;
+}
+
+.bio,
+.contact {
+  color: white;
+  max-width: 768px;
+  margin: auto;
+  padding: 25px;
+  background: rgba(0, 0, 10, 0.9);
+  border-bottom: 2px solid rgba(86, 145, 165, 1);
+  box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.1);
+}
+
+.contact {
+  margin-bottom: 100px;
+}
+
+.contact-heading,
+.bio-heading {
+  color: rgba(0, 191, 255, 0.99);
+  background: none;
+}
+
+.bio p {
+  text-align: justify;
+}
+
+.bio ul {
+  text-align: justify;
+  padding-right: 30px;
+  padding-left: 75px;
+}
+
+.bio li {
+  color: tomato;
+}
+
+.bio ul li::before {
+  content: "\2022";
+  font-weight: bold;
+  color: rgba(0, 191, 255, 0.99);
+  display: inline-block; 
+  width: 17px;
+  margin-left: -17px;
+}
+
+.my-logo {
+  width: 100px;
+  padding: 10px;
+  margin: 35px auto;
+  border-radius: 50%;
+  background: deepskyblue;
+}
+
+.profile-pic {
+  width: 75px;
+  border-radius: 2px;
+  border: 1px solid black;
+  z-index: -9;
+}
+
+.exp-item {
+  max-width: 1024px;
+  padding: 25px;
+  margin: 35px auto;
+  color: white;
+  background: rgba(0, 0, 10, 0.9);
+  border-bottom: 1px solid rgba(0, 191, 255, 0.1);
+  box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.1);
+  transition: all 0.4s ease-out;
+}
+
+.exp-item:hover {
+  border-bottom: 1px solid rgba(0, 191, 255, 0.3);
+  box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.3);
+}
+
+.exp-title {
+  color: rgba(0, 191, 255, 0.99);
+}
+
+.exp-description {
+  text-align: justify;
+  margin: 25px auto;
+}
+
+.exp-disclaimer {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: tomato;
+  text-shadow: 1px 1px 0 rgba(0, 0, 50, 0.7);
+  width: 200px;
+  margin: auto auto 15px;
+}
+
+.exp-sub-disclaimer {
+  font-weight: bolder;
+}
+
+.exp-date {
+  color: tomato;
+  font-family: 'Courier New', monospace;
+  font-size: 1.25rem;
+  font-weight: bolder;
+}
+
+.exp-bullets-heading {
+  color: rgba(0, 191, 255, 0.99);
+}
+
+.exp-item ul {
+  list-style: none;
+  color: rgba(0, 191, 255, 0.9);
+  text-align: left;
+  list-style: disc;
+  padding-left: 15px;
+  margin: 35px auto;
+}
+
+.exp-item ul {
+  color: tomato;
+  max-width: 684px;
+}
+
+.exp-item ul li::before {
+  content: "\2022";
+  font-weight: bold;
+  display: inline-block; 
+  width: 17px;
+  margin-left: -17px;
+}
+
+.exp-item ul li::before {
+  color: rgba(0, 191, 255, 0.9);
+}
+
+.contact form {
+  display: flex;
+  flex-flow: column;
+  text-align: left;
+  max-width: 420px;
+  margin: auto;
+}
+
+.contact label {
+  cursor: pointer;
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  height: 42px;
+  margin: 15px auto;
+  background:rgba(250, 250, 255, 1);
+  border-radius: 4px 4px 0 0;
+  border: 2px solid rgba(0, 191, 255, 0.99);
+  transition: all 0.4s ease-out;
+}
+
+.contact label:last-of-type {
+  height: 142px;
+  overflow-y: scroll;
+}
+
+.contact span {
+  color: rgba(0, 0, 10, 0.9);
+  font-weight: bolder;
+  padding-top: 12px;
+  padding-right: 5px;
+  padding-left: 10px;
+  background:rgba(250, 250, 255, 1);
+  border-radius: 4px 0 0 0;
+}
+
+.contact input,
+.contact textarea {
+  flex-grow: 2;
+  padding-left: 5px;
+  background:rgba(250, 250, 255, 1);
+  border-radius: 0 4px 0 0;
+  border: none;
+  outline: none;
+}
+
+.contact textarea {
+  line-height: 1.5rem;
+  padding-top: 10px;
+}
+
+.contact button {
+  cursor: pointer;
+  font-size: 1.25rem;
+  width: 100%;
+  height: 42px;
+  margin: 15px auto 25px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  color: deepskyblue;
+  background:rgba(0, 191, 255, 0.1);
+  outline: none;
+  border-radius: 4px 4px 0 0;
+  border: none;
+  border-bottom: 2px solid rgba(0, 191, 255, 0.9);
+  box-shadow: 3px 3px 5px rgba(0, 191, 255, 0.3) inset, -3px -3px 5px rgba(0, 191, 255, 0.3) inset;
+  transition: all 0.4s ease-out;
+}
+
+.contact button:hover {
+  color: tomato;
+  background:rgba(255, 99, 71, 0.1);
+  border-bottom: 2px solid rgba(255, 99, 71, 0.9);
+  box-shadow: 3px 3px 5px rgba(255, 99, 71, 0.3) inset, -3px -3px 5px rgba(255, 99, 71, 0.3) inset;
+}
+
+.contact p {
+  color: tomato;
+}
+
+.contact .error-box {
+  color: red;
+  max-width: 420px;
+  margin: auto;
+  list-style-type: none;
+}
+
+.contact .err-border {
+  border: 2px solid red;
+}
+
+.props {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1500px;
+  margin: auto;
+}
+
+.props h2 {
+  width: 100%;
+}
+
+.props-txt-box {
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.props-txt {
+  text-align: justify;
+  padding: 25px;
+  background: rgba(250, 250, 255, 0.9);
+}
+
+.prop-box {
+  color: white;
+  max-width: 420px;
+  margin: 25px auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  background:rgba(0, 0, 10, 0.9);
+  border-bottom: 2px solid tomato;
+}
+
+.prop-info-box {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: row-reverse; 
+}
+
+.prop-name {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color:rgba(0, 191, 255, 0.99);
+  width: 100%;
+} 
+
+.prop-role {
+  font-weight: bolder;
+  color: tomato;
+  margin-left: 0px;
+}
+
+.prop-date {
+  font-weight: bolder;
+  color: tomato;
+  margin-right: 0px;
+}
+
+.prop {
+  font-weight: bolder;
+  color: black;
+  text-align: justify;
+  padding: 10px;
+  margin: 10px auto 25px;
+  background: white;
+  border-radius: 4px 4px 0 0;
+  border-bottom: 3px solid rgba(0, 191, 255, 0.9);
+}
+
+.logo-box {
+  width: 100%;
+}

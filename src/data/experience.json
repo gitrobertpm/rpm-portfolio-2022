@@ -1,0 +1,59 @@
+[ {
+  "id": 3,
+  "date": "9/2021 to 1/2022",
+  "company": "Unleashed Technologies",
+  "title": "Frontend React Developer - Contract position",
+  "description": "Landed my first real web developer position.",
+  "bullets": {
+    "heading": "Current Job Stats",
+    "points": [
+      "Worked on a frontend team to debug, code review and add features to a huge sports related ecommerce app with over 12,000 commits and tens of thousands of lines of code.",
+      "Frontend stack:  React, React Query,  Material UI, Typescript",
+      "Backend stack: PHP, Symfony, Twig, SQL", 
+      "Dev env: Continuous integration with Docker, Webpack, JSLint, Cypress, GitLab",
+      "Remote collaboration: Jira, Slack, Outlook"
+    ]
+  }
+},
+  {
+    "id": 2,
+    "date": "2/2017 to 6/2021",
+    "company": "Treehouse",
+    "title": "Frontend and Fullstack JavaScript Coordinator, Developer and Mentor",
+    "description": "Promoted part time to full time, and from frontend to to the Full Stack JavaScript Techdegree.",
+    "bullets": {
+      "heading": "Current Job Stats",
+      "points": [
+        "Collaboratively designed and created the software, programs, projects, and supporting material for the Front End and Full Stack JavaScript Techdegrees (online web dev bootcamps).",
+        "4,600+ frontend and fullstack student projects reviewed and evaluated.",
+        "Debugged thousands of projects and mentored hundreds of students with live, real-time online support.", 
+        "Created and experimented with new programs to promote student success and increase conversion and retention rates.",
+        "Created, curated and documented team processes.",
+        "Reviewed, tracked and reported on analytics.",
+        "Help interview, hire and train new team members.",
+        "Use GitHub, Mode, JIRA, Confluence, AWS s3 and Zoom."
+      ]
+    }
+  },
+  {
+    "id": 1,
+    "date": "3/2016 - 2/2017",
+    "company": "Self-Employed",
+    "title": "Contractor — Web Development Student Mentor",
+    "description": "Got my first web dev gig.",
+    "bullets": {
+      "heading": "Duties",
+      "points": [
+        "Review, evaluate and grade student code and project submissions.", 
+        "Live debugging and mentoring in Slack support community."
+      ]
+    } 
+  },
+  {
+    "id": 0,
+    "date": "6/2014",
+    "company": "Student",
+    "title": "Discovered that I could learn to code",
+    "description": "Began studying front end web development and design. Signed up for Treehouse, Codecademy and Udacity.  Fell in love with programming."
+  }
+]

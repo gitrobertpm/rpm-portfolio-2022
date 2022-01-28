@@ -1,0 +1,34 @@
+[
+  { 
+    "quote": "I long to accomplish a great and noble task.  But it is my chief duty to accomplish small tasks as though they were great and nobel.  For the world is moved along not just by the mighty shoves of its heroes, but by the aggregate of the small pushes of each tiny worker.", 
+    "citation": "— Helen Keller" 
+  },
+  {
+    "quote": "There are two hard things in computer science: cache invalidation, naming things, and off-by-one errors.", 
+    "citation": "— Jeff Atwood"
+  },
+  {
+    "quote": "If it's your job to eat a frog, then eat it first thing in the morning.  If it's your job to eat two frogs, eat the big one first.", 
+    "citation": "— Mark Twain"
+  },
+  {
+    "quote": "It's not that I'm so smart.  It's just that I stay with the problem longer.", 
+    "citation": "— Albert Einstein"
+  },
+  {
+    "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.", 
+    "citation": "— Joh Woods"
+  },
+  {
+    "quote": "You Can't Write Perfect Software. Did that hurt? It shouldn't. Accept it as an axiom of life. Embrace it. Celebrate it. Because perfect software doesn't exist. No one in the brief history of computing has ever written a piece of perfect software. It's unlikely that you'll be the first. And unless you accept this as a fact, you'll end up wasting time and energy chasing an impossible dream.", 
+    "citation": "— Andrew Hunt"
+  },
+  {
+    "quote": "One of my most productive days was throwing away 1,000 lines of code.", 
+    "citation": "— Ken Thompson"
+  },
+  {
+    "quote": "The bad news is you're falling, no parachute, nothing to hang on to.  The good news is there's no ground.", 
+    "citation": "— Chogyam Trungpa Rinpoche"
+  }
+]

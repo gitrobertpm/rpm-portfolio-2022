@@ -1,0 +1,329 @@
+[
+  {
+    "id": 0,
+    "title": "BSN Sports",
+    "shortDescription": "A sports related Ecommerce application.",
+    "description": [
+      "The primary purpose of this sports related Ecommerce application is to provide a platform for the tens of thousands of school and community sports teams to custom design and ordinary sporting equipment and uniforms for their teams.",
+      "Team managers and coaches can create accounts for their teams, generate custom designs and custom gear and uniforms, and provide links where parents and players can order what they need.",
+      "This is to be a new and improved replacement for [the current app found here](https://www.bsnsports.com/).",
+      "This thing is a beast: Over 12,000 commits, over 2,100 Jira tickets, over tens of thousands of lines of code, and nearly two years in development"
+      
+    ],
+    "stack": [
+      "React for the base",
+      "React Query for API calls",
+      "Material UI for quick styles",
+      "TypeScript for strict type checking",
+      "PHP for the servers",
+      "Symfony for PHP",
+      "Twig templating",
+      "A number SQL databases",
+      "External APIs",
+      "Continuous integration",
+      "Docker for the environment",
+      "Webpack for bundling",
+      "JSLint for linting",
+      "Cypress for testing",
+      "GitLab for version control",
+      "Jira for task tracking"
+    ],
+    "links": [
+      {
+        "name": "Old version",
+        "url": "https://www.bsnsports.com"
+      }
+    ],
+    "imgKey": "bsn"
+  },
+  {
+    "id": 1,
+    "title": "The Truth Supreme",
+    "shortDescription": "A full stack social web app with a customizable UI where users can sign up, sign in, post and edit content and vote on content posted by others.",
+    "description": [
+      "The primary purpose behind this project was to demo what I can build.  But it was also something of a fun passion project.",
+      "The back end is a Node and SQL REST API, leveraging the Express framework and Sequelize ORM.  The database consists of three tables, each with associations to the other two, utilizing Sequelize's builtin validation, UUIDv4 for primary keys, and custom migrations and seeders.", 
+      "The front end is a robust React SPA to consume the above REST API, using modern React techniques like functional components and lifecycle hooks."
+    ],
+    "stack": [
+      "Create React App with BrowserRouter",
+      "Functional components with React hooks for state and lifecycle events",
+      "Original responsive and mobile-first CSS for a customizable UI with a dark/lite theme and numerous color, accent and background options",
+      "Node and Express REST API",
+      "Sequelize ORM for validation, CRUD, migrations and seeders",
+      "Sqlite for development DB",
+      "Postgress for production DB",
+      "Async await with try catch for async operations",
+      "Modular middleware for error handling, route handling, eager loading, async operations, user authorization, and UUID creation for seeder files.",
+      "Heroku with a hobby dyno and heroku-postgres for the back end hosting",
+      "Netlify for the front end hosting"
+    ],
+    "links": [
+      {
+        "name": "API repo",
+        "url": "https://github.com/gitrobertpm/truthsupreme-2"
+      },
+      {
+        "name": "Client repo",
+        "url": "https://github.com/gitrobertpm/truth-api"
+      },
+      {
+        "name": "Live",
+        "url": "https://truthsupreme.netlify.app/"
+      }
+    ],
+    "imgKey": "ts"
+  },
+  {
+    "id": 2,
+    "title": "EZ Random User API",
+    "shortDescription": "A public API that generates random user data to help students and developers test their front ends.",
+    "description": [
+      "This project was built to help the students I mentor.  One of their school projects relies on the [Random User API](https://randomuser.me/) as a third party dependency.  That API is great, but it's gone offline periodically, which created a need for a backup API.  So one day after work, when the API was down, I decided to build my own.",
+      "I created a JSON file with an object of arrays containing possible user data.  Additional APIs were used to supply random user images.  I crafted some helper functions to grab random values from the JSON and assemble the info into a new random user object that resembled the schema from the Random User API responses that students were used to using.", 
+      "Lastly, I deployed to heroku, and before the next, I had a fully functional backup for the Random User API."
+    ],
+    "stack": [
+      "Node.js",
+      "Express framework",
+      "Express App Generator",
+      "JSON for original data store",
+      "Functional JS for retrieving random data for JSON store",
+      "Heroku for hosting the API",
+      "Basic markup, responsive stylesheets and ES6 JS for a simple example client to consume the API",
+      "GitHub Pages for hosting the front end example "
+    ],
+    "links": [
+      {
+        "name": "API repo",
+        "url": "https://github.com/gitrobertpm/ez-random-user-api"
+      },
+      {
+        "name": "Client repo",
+        "url": "https://github.com/gitrobertpm/random-user-client"
+      },
+      {
+        "name": "Live",
+        "url": "https://gitrobertpm.github.io/random-user-client/"
+      }
+    ],
+    "imgKey": "rubu"
+  },
+  {
+    "id": 3,
+    "title": "Project Warm Ups",
+    "shortDescription": "A collection of front end coding exercises I designed and built to support the students I mentor.",
+    "description": [
+      "The numerous project examples on this app are simple coding exercise that I built to help provide students I mentor with a chance to practice the techniques they'll use in their own projects.",
+      "Each consists of a simple front end that provides markup, stylesheets, instructions for completing the challenge and custom tests to check the results of the student's code."       
+    ],
+    "stack": [
+      "HTML",
+      "Custom HTML form elements",
+      "CSS",
+      "ES6 JS",
+      "Custom testing",
+      "GitHub Pages for hosting"
+    ],
+    "links": [
+      {
+        "name": "Repo",
+        "url": "https://github.com/gitrobertpm/td-warm-ups"
+      },
+      {
+        "name": "Live",
+        "url": "https://gitrobertpm.github.io/td-warm-ups/"
+      }
+    ],
+    "imgKey": "tdwu"
+  },
+  {
+    "id": 4,
+    "title": "EZ Hold 'Em",
+    "shortDescription": "A Texas Hold 'Em hand simulator.",
+    "description": [
+      "This was just a side project I started for fun.  The app simulates the dealing and game flow for hands of Texas of Hold 'Em.",
+      "Using OOP concepts, I created JS classes for the cards, deck, table, dealer and players.  An MVC approach allows for logical control of the app's functionality, data state, and updates to the display.",
+      "The next goal is to see if I can add chips for betting and the logic for determining winning hands as well as programming the AI for computer players."
+    ],
+    "stack": [
+      "HTML",
+      "Responsive, mobile-first CSS",
+      "Sass",
+      "ES6 JS",
+      "DOM manipulation and traversal",
+      "Event handling",
+      "OOP with JS Classes",
+      "MVC concepts",
+      "GitHub Pages for hosting"
+    ],
+    "links": [
+      {
+        "name": "Repo",
+        "url": "https://github.com/gitrobertpm/ez-holdem"
+      },
+      {
+        "name": "Live",
+        "url": "https://gitrobertpm.github.io/ez-holdem/"
+      }
+    ],
+    "imgKey": "he"
+  },
+  {
+    "id": 5,
+    "title": "React Flickr Gallery",
+    "shortDescription": "A React SPA for retrieving photos from the Flickr API.",
+    "description": [
+      "The students I mentor have to build a project like this.  So I built this one myself to better support the students.",
+      "Create React App was used to start this project.  I created a Flickr account to acquire a key to query their API, which is defined in environment variables for security.",
+      "App uses only functional components with hooks for managing state and lifecycle events.  All state is mainly managed in container components, with data passed down to stateless presentational components.  The application listens for changes to the URL and then updates, searches and displays results as needed. No search results and undefined routes are handled gracefully."
+    ],
+    "stack": [
+      "Create React App with BrowserRouter",
+      "Functional components and hooks for state and lifecycle events",
+      "Fetch, async/await and try catch blocks for reliably retrieving API data",
+      "Custom environment variables for securely using my Flickr private key",
+      "Hosted on Netlify"
+    ],
+    "links":[
+      {
+        "name": "repo",
+        "url": "https://github.com/gitrobertpm/my-flickr-search-app"
+      },
+      {
+        "name": "Live",
+        "url": "https://quirky-noyce-313f11.netlify.app/"
+      }
+    ],
+    "imgKey": "rfg"
+  },
+  {
+    "id": 6,
+    "title": "Code Crossword",
+    "shortDescription": "A front end crossword app to provide students with a fun way to practice their coding vocabulary.",
+    "description": [
+      "I created this project mainly to see if I could.  I used a basic MVC/OOP approach and created one file to hold an object of puzzle objects containing all the clues and answers, one file to handle the main puzzle functionality, one file to handle updating the UI, and one main script file to wire it all up and listen for user events.", 
+      "At some point I may refactor this one to improve the code and maybe create a crossword generator feature that lets users enter words and clues into a form in order to produce their own custom crosswords that they could share with friends."
+    ],
+    "stack": [
+      "HTML",
+      "Responsive CSS using Flexbox, CSS variables and custom UI components",
+      "ES6 JavaScript",
+      "DOM manipulation and traversal",
+      "Event handling",
+      "OOP programming principles",
+      "MVC application design approach",
+      "GitHub Pages for hosting"
+    ],
+    "links": [
+      {
+        "name": "Repo",
+        "url": "https://github.com/gitrobertpm/fsjs-crosswords"
+      },
+      {
+        "name": "Live",
+        "url": "https://gitrobertpm.github.io/fsjs-crosswords/"
+      }
+    ],
+    "imgKey": "cw"
+  },
+  {
+    "id": 7,
+    "title": "The E Ching",
+    "shortDescription": "A front end app to simulate the ancient divination practice of consulting the oracle with the I Ching.",
+    "description": [
+      "I built this fun project when I was still pretty new to web development, so please don't judge the code too harshly." 
+    ],
+    "stack": [
+      "HTML",
+      "Custom responsive and mobile-first CSS",
+      "Sprite sheets",
+      "JS",
+      "Adobe Illustrator for image creation and optimization",
+      "GitHub Pages for hosting"
+    ],
+    "links": [
+      {
+        "name": "Repo",
+        "url": "https://github.com/gitrobertpm/eching"
+      },
+      {
+        "name": "Live",
+        "url": "http://gitrobertpm.github.io/eching/"
+      }
+    ],
+    "imgKey": "ec"
+  },
+  {
+    "id": 8,
+    "title": "My Portfolio",
+    "shortDescription": "A React SPA portfolio showcasing my work.",
+    "description": [
+      "I utilized modern React and JavaScript techniques to craft this portfolio to showcase my skills, creativity, what I like to do, and some of the things I've built over the last few years."
+    ],
+    "stack": [
+      "Create React App with BrowserRouter",
+      "Functional components and hooks for state and lifecycle events",
+      "JSON for modularization and convenient data tracking and updating",
+      "Custom, responsive, mobile-first CSS with grid and flexbox layout",
+      "Google fonts, and Google Forms for the contact component",
+      "Affinity Designer for image creation and optimization",
+      "Hosted on Netlify"
+    ],
+    "links": [
+      {
+        "name": "repo",
+        "url": "https://github.com/gitrobertpm/rpm-portfolio-2021"
+      }
+    ],
+    "imgKey": "port"
+  },
+  {
+    "id":9,
+    "title": "The Early Years",
+    "shortDescription": "I started building projects and sharing my web art at an early stages in my learning.  Here's some samples of that early work.",
+    "description": [
+      "Displayed in this section is a fun little, themed site to display the educational Treehouse projects I built while going through the old Treehouse curriculum, as well as a few of the portfolios I built previously, before I knew how to develop with React and server side technologies." 
+    ],
+    "stack": [
+      "HTML",
+      "Website and Asset optimization",
+      "Sprite sheets",
+      "SVG + animations",
+      "Custom responsive and mobile-first CSS",
+      "CSS Animations",
+      "Sass",
+      "JS",
+      "DOM manipulation",
+      "Accessibility",
+      "Illustrator",
+      "Custom spreadsheets",
+      "Filter and Pagination",
+      "Custom form validation",
+      "Public APIs and AJAX",
+      "Web Scraping",
+      "Graphs",
+      "Video and Audio APIs",
+      "GitHub Pages"
+    ],
+    "links": [
+      {
+        "name": "Sch Projs",
+        "url": "http://gitrobertpm.github.io/myTreehouseProjects/"
+      },
+      {
+        "name": "2015 Port",
+        "url": "http://gitrobertpm.github.io/thewayunraveled/"
+      },
+      {
+        "name": "2016 Port",
+        "url": "https://gitrobertpm.github.io/rpmPortfolio/"
+      },
+      {
+        "name": "2017 Port",
+        "url": "https://gitrobertpm.github.io/myPortfolio/"
+      }
+    ],
+    "imgKey": "os"
+  }
+]
