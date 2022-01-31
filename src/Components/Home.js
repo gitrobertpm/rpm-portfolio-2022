@@ -22,7 +22,7 @@ const Home = () => {
         <h1>Robert Manolis</h1>
         <h2 className="rainbow"><code>Frontend Developer</code></h2>
         <img className="p-img main-js-logo" src={jsImg} alt="JavaScript icon" />
-        <h3 className="rainbow"><code>with fullstack experience</code></h3>
+        <h4 className="rainbow"><code>with fullstack experience</code></h4>
         <h4 className="nunito">Portfolio - <code>2022</code></h4>
 
         <div className="header-contact-link-box">

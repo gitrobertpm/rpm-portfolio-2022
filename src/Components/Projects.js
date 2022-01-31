@@ -7,7 +7,7 @@ import projectsData from '../data/projects.json';
 
 /* Img imports imports */
 import bsnUd from '../img/projects/bsn-ud.png';
-import bsnAd from '../img/projects/bsn-ud.png';
+import bsnAd from '../img/projects/bsn-ad.png';
 import bsnMtswP from '../img/projects/bsn-mtsw-p.png';
 import bsnMtswCc from '../img/projects/bsn-mtsw-cc.png';
 import bsnMtswAs from '../img/projects/bsn-mtsw-as.png';

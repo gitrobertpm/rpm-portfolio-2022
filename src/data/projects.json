@@ -2,10 +2,10 @@
   {
     "id": 0,
     "title": "BSN Sports",
-    "shortDescription": "A sports related Ecommerce application.",
+    "shortDescription": "I worked on the frontend team that built this sports related Ecommerce application.",
     "description": [
-      "The primary purpose of this sports related Ecommerce application is to provide a platform for the tens of thousands of school and community sports teams to custom design and ordinary sporting equipment and uniforms for their teams.",
-      "Team managers and coaches can create accounts for their teams, generate custom designs and custom gear and uniforms, and provide links where parents and players can order what they need.",
+      "This sports related Ecommerce application provides a platform for thousands of school and community sports teams to custom design and order sporting equipment and uniforms for their teams.",
+      "Team managers and coaches can create accounts for their teams, generate custom designs and custom gear and uniforms, and provide links that parents and players can use to order what they need.",
       "This is to be a new and improved replacement for [the current app found here](https://www.bsnsports.com/).",
       "This thing is a beast: Over 12,000 commits, over 2,100 Jira tickets, over tens of thousands of lines of code, and nearly two years in development"
       
@@ -273,7 +273,7 @@
     "links": [
       {
         "name": "repo",
-        "url": "https://github.com/gitrobertpm/rpm-portfolio-2021"
+        "url": "https://github.com/gitrobertpm/rpm-portfolio-2022"
       }
     ],
     "imgKey": "port"

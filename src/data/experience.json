@@ -1,6 +1,6 @@
 [ {
   "id": 3,
-  "date": "9/2021 to 1/2022",
+  "date": "9/2021 - 1/2022",
   "company": "Unleashed Technologies",
   "title": "Frontend React Developer - Contract position",
   "description": "Landed my first real web developer position.",
@@ -17,10 +17,10 @@
 },
   {
     "id": 2,
-    "date": "2/2017 to 6/2021",
+    "date": "2/2017 - 6/2021",
     "company": "Treehouse",
     "title": "Frontend and Fullstack JavaScript Coordinator, Developer and Mentor",
-    "description": "Promoted part time to full time, and from frontend to to the Full Stack JavaScript Techdegree.",
+    "description": "Promoted from contract to part time, then to full time, and from frontend to the Full Stack JavaScript Techdegree.",
     "bullets": {
       "heading": "Current Job Stats",
       "points": [
@@ -38,7 +38,7 @@
   {
     "id": 1,
     "date": "3/2016 - 2/2017",
-    "company": "Self-Employed",
+    "company": "Treehouse",
     "title": "Contractor — Web Development Student Mentor",
     "description": "Got my first web dev gig.",
     "bullets": {

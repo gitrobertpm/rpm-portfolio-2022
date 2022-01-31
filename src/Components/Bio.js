@@ -48,14 +48,6 @@ const Bio = () => {
           <br />
           <p>I started playing around with web development back in 2014.  Fell in love right away.  Studied for a couple years and landed myself a small contract role as a mentor at an online coding bootcamp in March of 2016.  Been working in this industry ever since.  Most recently as a Frontend React Developer for a mid-size firm building enormous applications for large corporate clients.</p>
           <br />
-          <p>At work and at home:</p>
-          <ul>
-            <li>The health of the team is paramount.</li>
-            <li>Problem solving, figuring out how things work, and that feeling after accomplishing something are what motivate me.</li>
-            <li>I prefer challenges that come naturally from the work at hand over those that stem from shortcomings in our processes and communication.</li>
-            <li>I'm all about trying to enjoy the journey, learn what it has to teach, and hopefully make things better in the process.</li>
-          </ul>
-          <br />
           <p>And when I'm not working, I love to learn new things and spend time with my family.  I love to watch movies and play the guitar and play video games with my kids.  I love the outdoors, but don't get out there as much as I should. I love to read and build things but don't get to them as much as I'd like.  And whenever possible, I love to ponder the meaning of life, the nature of reality, the essence of truth, the mystery of consciousness, and the clockworks of the human condition.</p>
           <br />
           <span>😎</span>
