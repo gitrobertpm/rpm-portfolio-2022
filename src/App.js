@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Nav from './Components/Nav';
 import Home from './Components/Home';
 import Projects from './Components/Projects';
+import ProjectsCarousel from './Components/ProjectsCarousel';
 
 
 import Bio from './Components/Bio';
@@ -32,7 +33,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={ <Navigate to="/home" /> } />
           <Route exact path="/home" element={ <Home /> } />
-          <Route exact path="/projects" element={ <Projects /> } />
+          <Route exact path="/projects" element={ <ProjectsCarousel /> } />
 
           {/* <Route path="/about/*" element={ <About /> } /> */}
 
