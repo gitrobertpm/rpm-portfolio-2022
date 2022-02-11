@@ -1,4 +1,7 @@
 
+import { useState, useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+
 /* Component imports */
 import Project from './Project';
 
@@ -44,7 +47,20 @@ import pt162 from '../img/projects/port-2016-2.PNG';
 import pt163 from '../img/projects/port-2016-3.PNG';
 import pt17 from '../img/projects/port-2017.PNG';
 
-const Projects = () => {
+const ProjectsCarousel = () => {
+
+  const [currentProjectPath, setCurrentProjectPath] = useState('bsn-sports-(coming-soon)');
+
+  let location = useLocation();
+  let pathname = location.pathname;
+  let projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
+
+  useEffect(() => {
+    if (projectPathname !== currentProjectPath) {
+      setCurrentProjectPath(projectPathname);
+    }
+  }, [projectPathname, currentProjectPath]);
+
   /* Connect imported images with their respective projects */
   const imgObj = {
     bsn: [bsnUd, bsnAd, bsnMtswP, bsnMtswCc, bsnMtswAs, bsnMtswAp],
@@ -59,13 +75,52 @@ const Projects = () => {
     os: [th1, pt15, pt161, pt162, pt163, pt17]
   }
 
+  // Convert title to pathlike strings
+  const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+
+  // Collection of project title in pathlike form
+  const projectPaths = projectsData.map((proj) => pathify(proj.title));
+
+  console.log('projectPaths: ', projectPaths);
+
+  const currentProject = projectsData[projectPaths.indexOf(currentProjectPath)];
+
   return (
     <div className="projects-container">
       <div className="projects-retainer">
 
         <h1 className="top-heading projects-heading">Projects</h1>
 
-        {
+        <div className="projects-menu">
+          {
+            projectsData.map((proj, i) => {
+              return (
+                <NavLink 
+                  to={`/projects/${pathify(proj.title)}`} 
+                  className="project-menu-project-link" 
+                  key={ `${i} - ${proj.title}` }
+                  style={{backgroundColor: `rgb(0, 0, 10)`, backgroundImage: `url(${imgObj[proj.imgKey][0]})`, backgroundSize: 100 + '%'}}
+                >
+                  <h4 className="project-menu-project-title">{proj.title}</h4>
+                  {/* <img src={ imgObj[proj.imgKey][0] } alt="Project screenshot" className="project-menu-project-img" /> */}
+                  <p className="project-menu-project-short-description">{ proj.shortDescription }</p>
+                </NavLink>
+              );
+            })
+          }
+        </div>
+
+        <Project 
+          id={currentProject.id}
+          title={currentProject.title}
+          shortDescription={currentProject.shortDescription}
+          description={currentProject.description}
+          stack={currentProject.stack}
+          links={currentProject.links}
+          imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
+        />
+
+        {/* {
           projectsData.map((proj, i) => {
             return (
               <Project 
@@ -80,10 +135,10 @@ const Projects = () => {
               />
             );
           })
-        }
+        } */}
       </div>
     </div>
   );  
 };
 
-export default Projects;
+export default ProjectsCarousel;

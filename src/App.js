@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 /* Component imports */
 import Nav from './Components/Nav';
 import Home from './Components/Home';
-import Projects from './Components/Projects';
+// import Projects from './Components/Projects';
 import ProjectsCarousel from './Components/ProjectsCarousel';
 
 
@@ -19,6 +19,7 @@ import NotFound from './Components/NotFound';
 /* Stylesheets imports */
 import './css/App.css';
 import './css/project.css';
+import './css/projects-carousel.css';
 import './css/about.css';
 import './css/media-query.css';
 
@@ -33,7 +34,7 @@ const App = () => {
         <Routes>
           <Route exact path="/" element={ <Navigate to="/home" /> } />
           <Route exact path="/home" element={ <Home /> } />
-          <Route exact path="/projects" element={ <ProjectsCarousel /> } />
+          <Route exact path="/projects/*" element={ <ProjectsCarousel /> } />
 
           {/* <Route path="/about/*" element={ <About /> } /> */}
 

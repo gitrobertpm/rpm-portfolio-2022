@@ -1,0 +1,46 @@
+
+.projects-menu {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width: calc(100% - 20px);
+  max-width: 1024px;
+  /* border: 1px solid blue; */
+}
+
+.project-menu-project-link {
+  /* position: relative; */
+  flex-grow: 1;
+  /* width: 250px; */
+  max-width: 250px;
+  background-size: 100% auto;
+  border: 15px solid rgba(0, 0, 10, 0.9);
+  overflow: hidden;
+}
+
+.project-menu-project-link:hover {
+  border-bottom-color: rgba(0, 0, 10, 0.9);
+}
+
+.project-menu-project-title,
+.project-menu-project-short-description {
+  /* position: absolute; */
+  background: rgba(0, 0, 10, 0.9);
+  border-radius: 3px 3px 0 0;
+  width: calc(100% - 20px);
+  max-width: 300px;
+  margin: 10px auto;
+  padding: 5px;
+  border-bottom: 3px solid tomato;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+}
+
+.project-menu-project-short-description {
+
+}
+
+.project-menu-project-link:hover > .project-menu-project-title,
+.project-menu-project-link:hover > .project-menu-project-short-description {
+  opacity: 1;
+}
