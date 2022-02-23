@@ -1,46 +1,93 @@
 
-.projects-menu {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+.projects-heading {
   width: calc(100% - 20px);
-  max-width: 1024px;
-  /* border: 1px solid blue; */
+  max-width: 420px;
+  margin: 115px auto 0px;
 }
 
-.project-menu-project-link {
-  /* position: relative; */
-  flex-grow: 1;
-  /* width: 250px; */
-  max-width: 250px;
-  background-size: 100% auto;
-  border: 15px solid rgba(0, 0, 10, 0.9);
+.projects-menu-wrapper {
+  position: fixed;
+  top: 1px;
+  width: 100%;
+  z-index: 99;
+}
+
+.projects-menu {
+  position: relative;
+  width: calc(100% -84px);
+  max-width: calc(100% -84px);
+  max-height: 75px;
+  min-height: 62px;
+  margin: 43px auto 0px;
+  padding: 0px 42px;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 10, 0.9);
+  transition: all 0.4s ease-out;
   overflow: hidden;
 }
 
-.project-menu-project-link:hover {
-  border-bottom-color: rgba(0, 0, 10, 0.9);
+.project-menu-left,
+.project-menu-right {
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  cursor: pointer;
+  color: tomato;
+  /* text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5); */
+  font-size: 2rem;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 42px;
+  height: 100%;
+  background: rgba(0, 0, 10, 0.95);
+  border: 2px solid rgba(0, 191, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  z-index: 999;
 }
 
-.project-menu-project-title,
-.project-menu-project-short-description {
-  /* position: absolute; */
-  background: rgba(0, 0, 10, 0.9);
-  border-radius: 3px 3px 0 0;
-  width: calc(100% - 20px);
-  max-width: 300px;
-  margin: 10px auto;
-  padding: 5px;
-  border-bottom: 3px solid tomato;
-  opacity: 0;
+.project-menu-left {
+  left: 0;
+}
+
+.project-menu-right {
+  right: 0;
+}
+
+.project-menu-left:hover,
+.project-menu-right:hover {
+  color: rgba(0, 191, 255, 0.9);
+}
+
+.project-menu-carousel {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2px;
   transition: all 0.4s ease-in-out;
+  overflow: hidden;
 }
 
-.project-menu-project-short-description {
-
+.project-menu-project-link {
+  position: relative;
+  min-width: 50px;
+  min-height: 38px;
+  margin: 0px 5px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-radius: 0;
+  transition: all 0.4s ease-in-out;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.5));
+  overflow: hidden;
 }
 
-.project-menu-project-link:hover > .project-menu-project-title,
-.project-menu-project-link:hover > .project-menu-project-short-description {
-  opacity: 1;
+.project-menu-project-link.active {
+  width: 70px;
+  min-width: 70px;
+  height: 55px;
+  max-height: 55px;
+  min-height: 55px;
+  border-bottom: 1px solid rgba(0, 191, 255, 0.9);
 }

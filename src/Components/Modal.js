@@ -1,28 +1,28 @@
 
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Imgs = (props) => {
-  return(
-    <div className="mod-img-wrap">
-      {props.children}
-    </div>
-  );
-}
+	return (
+		<div className="mod-img-wrap">
+			{ props.children }
+		</div>
+	);
+};
 
-const Modal = (props) => {
+Imgs.propTypes = {
+	children: PropTypes.element
+};
 
-  console.log(props.component.toString());
-
-  // const img = <div component={ () => <props.component /> } />
-
-  
-
-  return (
-    <div className="modal-container">
-      <div className="modal">
-        <button type="button">X</button>
-        <Imgs children={props.component} />
-      </div>
-    </div>
-  );
-}
+const Modal = () => {
+	return (
+		<div className="modal-container">
+			<div className="modal">
+				<button type="button">X</button>
+				<Imgs> props.component </Imgs>
+			</div>
+		</div>
+	);
+};
 
 export default Modal;

@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 /* Component imports */
 import About from './About';
 import ExpItem from './ExpItem';
@@ -10,36 +12,36 @@ import experienceData from '../data/experience.json';
 import myLogo from '../img/myLogo.svg';
 
 const Experience = () => {
-  return (
-    <div className="about-container">
-      <About />
-      <div className="experience">
+	return (
+		<div className="about-container">
+			<About />
+			<div className="experience">
         
-        <h2 className="top-heading experience-heading">Experience</h2>
+				{/* <h2 className="top-heading experience-heading">Experience</h2> */}
 
-        <div className="exp-item-container">
+				<div className="exp-item-container">
 
-          {
-            experienceData.map((ei, i) => {
-              return ( 
-                <ExpItem 
-                  id={ ei.id }
-                  key={ i }
-                  date={ ei.date }
-                  company={ ei.company }
-                  title={ ei.title }
-                  description={ ei.description }
-                  bullets={ ei.bullets && ei.bullets }
-                />
-              );
-            })
-          }
-        </div>
+					{
+						experienceData.map((ei, i) => {
+							return ( 
+								<ExpItem 
+									id={ ei.id }
+									key={ i }
+									date={ ei.date }
+									company={ ei.company }
+									title={ ei.title }
+									description={ ei.description }
+									bullets={ ei.bullets && ei.bullets }
+								/>
+							);
+						})
+					}
+				</div>
 
-        <img className="my-logo" src={ myLogo } alt="My Logo" />
-      </div>
-    </div>
-  );
+				<img className="my-logo" src={ myLogo } alt="My Logo" />
+			</div>
+		</div>
+	);
 };
 
 export default Experience;

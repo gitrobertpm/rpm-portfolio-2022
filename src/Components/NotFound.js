@@ -1,19 +1,21 @@
 
+import React from 'react';
+
 /* Image imports */
 import myLogo from '../img/myLogo.svg';
 
 const NotFound = () => {
-  return (
-    <div className="not-found">
+	return (
+		<div className="not-found">
 
-      <h2 className="top-heading not-found-heading">404</h2>
+			<h2 className="top-heading not-found-heading">404</h2>
 
-      <p><strong>Unfortunately, the page you're looking for doesn't exist.</strong></p>
+			<p><strong>{`Unfortunately, the page you're looking for doesn't exist.`}</strong></p>
 
-      <img className="my-logo" src={ myLogo } alt="My Logo" />
+			<img className="my-logo" src={ myLogo } alt="My Logo" />
       
-    </div>
-  );
+		</div>
+	);
 };
 
 export default NotFound;

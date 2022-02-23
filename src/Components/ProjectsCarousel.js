@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 /* Component imports */
 import Project from './Project';
@@ -8,137 +8,135 @@ import Project from './Project';
 /* Data imports */
 import projectsData from '../data/projects.json';
 
-/* Img imports imports */
-import bsnUd from '../img/projects/bsn-ud.png';
-import bsnAd from '../img/projects/bsn-ad.png';
-import bsnMtswP from '../img/projects/bsn-mtsw-p.png';
-import bsnMtswCc from '../img/projects/bsn-mtsw-cc.png';
-import bsnMtswAs from '../img/projects/bsn-mtsw-as.png';
-import bsnMtswAp from '../img/projects/bsn-mtsw-ap.png';
-import portHome from '../img/projects/port-home.PNG';
-import portHoMo from '../img/projects/port-ho-mo.PNG';
-import tsHome from '../img/projects/ts-home-2.PNG';
-import tsSettings from '../img/projects/ts-settings-2.PNG';
-import tsTruths from '../img/projects/ts-truths-2.PNG';
-import tsTruth from '../img/projects/ts-truth.PNG';
-import ruBuJson from '../img/projects/ru-bu-json.PNG';
-import ruBuReadme from '../img/projects/ru-bu-readme.PNG';
-import ruBuSample from '../img/projects/ru-bu-sample.PNG';
-import cwMath from '../img/projects/cw-math.PNG';
-import cwOne from '../img/projects/cw-one.PNG';
-import cwTwo from '../img/projects/cw-two.PNG';
-import ecOne from '../img/projects/ec-coins.PNG';
-import ecTwo from '../img/projects/ec-flip.PNG';
-import ecThree from '../img/projects/ec-hex.PNG';
-import heStart from '../img/projects/he-start.PNG';
-import heFlop from '../img/projects/he-flop.PNG';
-import heRiver from '../img/projects/he-river.PNG';
-import heMo from '../img/projects/he-mo.PNG';
-import rfg from '../img/projects/rfg.PNG';
-import rfgnr from '../img/projects/rfg-nr.PNG';
-import rfgmo from '../img/projects/rfg-mo.PNG';
-import tdwu from '../img/projects/td-wu.PNG';
-import tdwu2 from '../img/projects/td-wu-2.PNG';
-import tdwu3 from '../img/projects/triv-que.PNG';
-import th1 from '../img/projects/th-projs.PNG';
-import pt15 from '../img/projects/port-2015.PNG';
-import pt161 from '../img/projects/port-2016-1.PNG';
-import pt162 from '../img/projects/port-2016-2.PNG';
-import pt163 from '../img/projects/port-2016-3.PNG';
-import pt17 from '../img/projects/port-2017.PNG';
+/* Img imports */
+import imgObj from '../data/projImgRef';
 
 const ProjectsCarousel = () => {
 
-  const [currentProjectPath, setCurrentProjectPath] = useState('bsn-sports-(coming-soon)');
+	const projectMenuElement = useRef(null);
 
-  let location = useLocation();
-  let pathname = location.pathname;
-  let projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
+	const [currentProjectPath, setCurrentProjectPath] = useState('bsn-sports-(coming-soon)');
+	const [left, setLeft] = useState(40);
+	const [isEven, setIsEven] = useState(false);
 
-  useEffect(() => {
-    if (projectPathname !== currentProjectPath) {
-      setCurrentProjectPath(projectPathname);
-    }
-  }, [projectPathname, currentProjectPath]);
+	let navigateTo = useNavigate();
+	let location = useLocation();
+	let pathname = location.pathname;
+	let projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
 
-  /* Connect imported images with their respective projects */
-  const imgObj = {
-    bsn: [bsnUd, bsnAd, bsnMtswP, bsnMtswCc, bsnMtswAs, bsnMtswAp],
-    port: [portHome, portHoMo],
-    ts: [tsHome, tsTruths, tsTruth, tsSettings],
-    rubu: [ruBuJson, ruBuReadme, ruBuSample],
-    cw: [cwMath, cwOne, cwTwo],
-    ec: [ecOne, ecTwo, ecThree],
-    he: [heStart, heFlop, heRiver, heMo],
-    rfg: [rfg, rfgnr, rfgmo],
-    tdwu: [tdwu, tdwu2, tdwu3],
-    os: [th1, pt15, pt161, pt162, pt163, pt17]
-  }
+	// Convert title to pathlike strings
+	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
 
-  // Convert title to pathlike strings
-  const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+	// Collection of project titles in pathlike form
+	const projectPaths = projectsData.map((proj) => pathify(proj.title));
 
-  // Collection of project title in pathlike form
-  const projectPaths = projectsData.map((proj) => pathify(proj.title));
+	// Current project pathname
+	const currentProject = projectsData[projectPaths.indexOf(currentProjectPath)];
 
-  console.log('projectPaths: ', projectPaths);
+	// Scroll to top function
+	const scroller = () => window.scrollTo(0, 0);
 
-  const currentProject = projectsData[projectPaths.indexOf(currentProjectPath)];
+	// Helper functions to get width of menu and to get the number of links displayed in menu at current width
+	const getWidth = (el) => +window.getComputedStyle(el, null).getPropertyValue('width').slice(0, 3);
+	// const getItemsDisplayed = (width) => width / 66;
 
-  return (
-    <div className="projects-container">
-      <div className="projects-retainer">
+	// Update display
+	useEffect(() => {
 
-        <h1 className="top-heading projects-heading">Projects</h1>
+		const width = getWidth(projectMenuElement.current);
+		const total = projectPaths.length;
+		const half = Math.round(total / 2);
+		const currentIndex = projectPaths.indexOf(currentProjectPath);
+		const widthByItems = ((total * 66) + 20);
+		const dif = widthByItems - width;
+		const split = Math.ceil((dif / total) + (currentIndex / half));
+		const offset = -(split * currentIndex) + 40;
 
-        <div className="projects-menu">
-          {
-            projectsData.map((proj, i) => {
-              return (
-                <NavLink 
-                  to={`/projects/${pathify(proj.title)}`} 
-                  className="project-menu-project-link" 
-                  key={ `${i} - ${proj.title}` }
-                  style={{backgroundColor: `rgb(0, 0, 10)`, backgroundImage: `url(${imgObj[proj.imgKey][0]})`, backgroundSize: 100 + '%'}}
-                >
-                  <h4 className="project-menu-project-title">{proj.title}</h4>
-                  {/* <img src={ imgObj[proj.imgKey][0] } alt="Project screenshot" className="project-menu-project-img" /> */}
-                  <p className="project-menu-project-short-description">{ proj.shortDescription }</p>
-                </NavLink>
-              );
-            })
-          }
-        </div>
+		setLeft(`${offset}px`);
+		setIsEven(!isEven);
 
-        <Project 
-          id={currentProject.id}
-          title={currentProject.title}
-          shortDescription={currentProject.shortDescription}
-          description={currentProject.description}
-          stack={currentProject.stack}
-          links={currentProject.links}
-          imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
-        />
+		if (projectPathname === 'projects') {
+			return navigateTo(`/projects/${currentProjectPath}`);
+		}
 
-        {/* {
-          projectsData.map((proj, i) => {
-            return (
-              <Project 
-                key={i}
-                id={proj.id}
-                title={proj.title}
-                shortDescription={proj.shortDescription}
-                description={proj.description}
-                stack={proj.stack}
-                links={proj.links}
-                imgs={proj.imgKey && imgObj[proj.imgKey]}
-              />
-            );
-          })
-        } */}
-      </div>
-    </div>
-  );  
+		if (projectPathname !== currentProjectPath) {
+			return setCurrentProjectPath(projectPathname);
+		}
+	}, [projectPathname, currentProjectPath, navigateTo]);
+
+	// Menu arrow functionality
+	const handleLeftClick = () => {
+		const nextIndy = projectPaths.indexOf(currentProjectPath) - 1;
+		scroller();
+		if (nextIndy >= 0) {
+			return navigateTo(`/projects/${projectPaths[nextIndy]}`);
+		} else {
+			return navigateTo(`/projects/${projectPaths[projectPaths.length - 1]}`);
+		}
+	};
+
+	const handleRightClick = () => {
+		const nextIndy = projectPaths.indexOf(currentProjectPath) + 1;
+		scroller();
+		if (nextIndy <= projectPaths.length - 1) {
+			return navigateTo(`/projects/${projectPaths[nextIndy]}`);
+		} else {
+			return navigateTo(`/projects/${projectPaths[0]}`);
+		}
+	};
+
+	return (
+		<div className="projects-container">
+			<div className="wallpaper"></div>
+			
+			<div className="projects-retainer">
+
+				{/* <h1 className="top-heading projects-heading">Projects</h1> */}
+
+				<div className="projects-menu-wrapper">
+					<div className="projects-menu" ref={ projectMenuElement }>
+						<button className="project-menu-left" onClick={ handleLeftClick }>{`<`}</button>
+						<div className="project-menu-carousel" style={{ left: `${left}` }}>
+							{
+								projectsData.map((proj, i) => {
+									return (
+										<NavLink 
+											to={`/projects/${pathify(proj.title)}`} 
+											onClick={ scroller }
+											className="project-menu-project-link" 
+											key={ `${i} - ${proj.title}` }
+											style={{ backgroundImage: `url(${imgObj[proj.imgKey][0]})`, backgroundSize: 100 + '%' }}
+										>
+											{/* <div className="project-menu-link-inner-wrapper">
+											<h4 className="project-menu-project-title">{proj.title}</h4>
+											<p className="project-menu-project-short-description">{ proj.shortDescription }</p>
+										</div> */}
+											
+										</NavLink>
+									);
+								})
+							}
+						</div>
+						<button className="project-menu-right" onClick={ handleRightClick }>{`>`}</button>
+					</div>
+				</div>
+
+				<h2 className="top-heading projects-heading">Checkout some of my work</h2>
+
+				<Project 
+					isEven={isEven}
+					id={currentProject.id}
+					title={currentProject.title}
+					shortDescription={currentProject.shortDescription}
+					description={currentProject.description}
+					stack={currentProject.stack}
+					links={currentProject.links}
+					imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
+				/>
+
+			</div>
+		</div>
+	);  
 };
 
 export default ProjectsCarousel;
