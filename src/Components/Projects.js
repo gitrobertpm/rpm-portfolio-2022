@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 /* Component imports */
 import Project from './Project';
 
@@ -45,45 +47,46 @@ import pt163 from '../img/projects/port-2016-3.PNG';
 import pt17 from '../img/projects/port-2017.PNG';
 
 const Projects = () => {
-  /* Connect imported images with their respective projects */
-  const imgObj = {
-    bsn: [bsnUd, bsnAd, bsnMtswP, bsnMtswCc, bsnMtswAs, bsnMtswAp],
-    port: [portHome, portHoMo],
-    ts: [tsHome, tsTruths, tsTruth, tsSettings],
-    rubu: [ruBuJson, ruBuReadme, ruBuSample],
-    cw: [cwMath, cwOne, cwTwo],
-    ec: [ecOne, ecTwo, ecThree],
-    he: [heStart, heFlop, heRiver, heMo],
-    rfg: [rfg, rfgnr, rfgmo],
-    tdwu: [tdwu, tdwu2, tdwu3],
-    os: [th1, pt15, pt161, pt162, pt163, pt17]
-  }
+	/* Connect imported images with their respective projects */
+	const imgObj = {
+		bsn: [bsnUd, bsnAd, bsnMtswP, bsnMtswCc, bsnMtswAs, bsnMtswAp],
+		port: [portHome, portHoMo],
+		ts: [tsHome, tsTruths, tsTruth, tsSettings],
+		rubu: [ruBuJson, ruBuReadme, ruBuSample],
+		cw: [cwMath, cwOne, cwTwo],
+		ec: [ecOne, ecTwo, ecThree],
+		he: [heStart, heFlop, heRiver, heMo],
+		rfg: [rfg, rfgnr, rfgmo],
+		tdwu: [tdwu, tdwu2, tdwu3],
+		os: [th1, pt15, pt161, pt162, pt163, pt17]
+	};
 
-  return (
-    <div className="projects-container">
-      <div className="projects-retainer">
+	return (
+		<div className="projects-container">
+			<div className="wallpaper"></div>
+			<div className="projects-retainer">
 
-        <h1 className="top-heading projects-heading">Projects</h1>
+				<h1 className="top-heading projects-heading">Projects</h1>
 
-        {
-          projectsData.map((proj, i) => {
-            return (
-              <Project 
-                key={i}
-                id={proj.id}
-                title={proj.title}
-                shortDescription={proj.shortDescription}
-                description={proj.description}
-                stack={proj.stack}
-                links={proj.links}
-                imgs={proj.imgKey && imgObj[proj.imgKey]}
-              />
-            );
-          })
-        }
-      </div>
-    </div>
-  );  
+				{
+					projectsData.map((proj, i) => {
+						return (
+							<Project 
+								key={i}
+								id={proj.id}
+								title={proj.title}
+								shortDescription={proj.shortDescription}
+								description={proj.description}
+								stack={proj.stack}
+								links={proj.links}
+								imgs={proj.imgKey && imgObj[proj.imgKey]}
+							/>
+						);
+					})
+				}
+			</div>
+		</div>
+	);  
 };
 
 export default Projects;

@@ -1,0 +1,93 @@
+
+.brochure {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.brochure-heading {
+  max-width: 600px;
+  width: calc(100% - 20px);
+}
+
+.center {
+  display: none;
+}
+
+.satellite {
+  position: relative;
+  width: calc(100% - 50px);
+  max-width: 600px;
+  padding-bottom: 5px;
+  margin: 10px auto;
+  background-color: rgba(255, 255, 255, 0.8);
+  background-size: 100%;
+  background-position: 50% 50%;
+  border: 1px solid white;
+  border-radius: 4px 4px 0 0;
+  transition: all 0.4s ease-in-out;
+  overflow: hidden;
+}
+
+.satellite h3 {
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0px 1px 0 tomato;
+  width: 100%;
+  margin-top: 0;
+  padding: 20px 0;
+  background: rgba(0, 0, 10, 0.9);
+}
+
+.design h3 {
+  text-shadow: 0px 1px 0 rgba(0, 191, 255, 0.9);
+}
+
+.development h3 {
+  text-shadow: 0px 1px 0 rgba(0, 191, 255, 0.9);
+}
+
+.satellite h4 {
+  color: rgba(245, 245, 255, 0.9);
+  text-shadow: 0px 1px 0 rgba(0, 0, 50, 0.9);
+  margin: 10px auto;
+}
+
+.satellite p {
+  font-weight: bolder;
+  margin-bottom: 15px;
+}
+
+.satellite a {
+  font-weight: lighter;
+  color: rgba(0, 191, 255, 0.9);
+  text-shadow: 0px 1px rgba(0, 0, 50, 0.9);
+  margin: 0 auto 10px;
+  border-bottom: 2px solid rgba(0, 191, 255, 0.9);
+}
+
+.satellite:hover > p > a {
+  color: tomato;
+  border-bottom: 2px solid tomato;
+}
+
+.design h4 {
+  color:black;
+  text-shadow: 0px 1px 0 tomato;
+}
+
+.development h4 {
+  text-shadow: 0px 1px 0 tomato;
+}
+
+.satellite ul {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+  width: calc(100% - 20px);
+  max-width: 420px;
+  margin: auto;
+  padding: 10px 5px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 4px 4px 0 0;
+  border: 1px solid white;
+  overflow: auto;
+}

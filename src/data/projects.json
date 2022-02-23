@@ -34,7 +34,9 @@
         "url": "https://www.bsnsports.com"
       }
     ],
-    "imgKey": "bsn"
+    "imgKey": "bsn",
+    "imgFolder": "bsn",
+    "imgNames": ["user-dashboard", "account-dashboard", "product-selection", "color-selection", "art-selection", "art-location"]
   },
   {
     "id": 1,
@@ -72,7 +74,9 @@
         "url": "https://truthsupreme.netlify.app/"
       }
     ],
-    "imgKey": "ts"
+    "imgKey": "ts",
+    "imgFolder": "truth",
+    "imgNames": ["home.png", "truths.png", "truth.png", "settings.png"]
   },
   {
     "id": 2,
@@ -107,12 +111,14 @@
         "url": "https://gitrobertpm.github.io/random-user-client/"
       }
     ],
-    "imgKey": "rubu"
+    "imgKey": "rubu",
+    "imgFolder": "ezrandomuser",
+    "imgNames": ["ru-bu-sample.png", "ru-bu-json.png", "ru-bu-readme.png"]
   },
   {
     "id": 3,
     "title": "Project Warm Ups",
-    "shortDescription": "A collection of front end coding exercises I designed and built to support the students I mentor.",
+    "shortDescription": "A collection of front end coding exercises I designed and built to support the students I used to mentor.",
     "description": [
       "The numerous project examples on this app are simple coding exercise that I built to help provide students I mentor with a chance to practice the techniques they'll use in their own projects.",
       "Each consists of a simple front end that provides markup, stylesheets, instructions for completing the challenge and custom tests to check the results of the student's code."       
@@ -135,7 +141,9 @@
         "url": "https://gitrobertpm.github.io/td-warm-ups/"
       }
     ],
-    "imgKey": "tdwu"
+    "imgKey": "tdwu",
+    "imgFolder": "warmups",
+    "imgNames": ["td-wu.png", "td-wu-2.png", "triv-que.png"]
   },
   {
     "id": 4,
@@ -148,7 +156,7 @@
     ],
     "stack": [
       "HTML",
-      "Responsive, mobile-first CSS",
+      "Responsive, mobile-first custom CSS",
       "Sass",
       "ES6 JS",
       "DOM manipulation and traversal",
@@ -167,7 +175,9 @@
         "url": "https://gitrobertpm.github.io/ez-holdem/"
       }
     ],
-    "imgKey": "he"
+    "imgKey": "he",
+    "imgFolder": "ezholdem",
+    "imgNames": ["he-start.png", "he-flop.png", "he-river.png", "he-mo.png"]
   },
   {
     "id": 5,
@@ -195,7 +205,9 @@
         "url": "https://quirky-noyce-313f11.netlify.app/"
       }
     ],
-    "imgKey": "rfg"
+    "imgKey": "rfg",
+    "imgFolder": "reactflickr",
+    "imgNames": ["rfg.png", "rfg-nr.png", "rfg-mo.png"]
   },
   {
     "id": 6,
@@ -225,7 +237,9 @@
         "url": "https://gitrobertpm.github.io/fsjs-crosswords/"
       }
     ],
-    "imgKey": "cw"
+    "imgKey": "cw",
+    "imgFolder": "codecrossword",
+    "imgNames": ["cw-math.png", "cw-one.png", "cw-two.png"]
   },
   {
     "id": 7,
@@ -252,7 +266,9 @@
         "url": "http://gitrobertpm.github.io/eching/"
       }
     ],
-    "imgKey": "ec"
+    "imgKey": "ec",
+    "imgFolder": "eching",
+    "imgNames": ["ec-coins.png", "ec-flip.png", "ec-hex.png"]
   },
   {
     "id": 8,
@@ -276,7 +292,9 @@
         "url": "https://github.com/gitrobertpm/rpm-portfolio-2022"
       }
     ],
-    "imgKey": "port"
+    "imgKey": "port",
+    "imgFolder": "portfolio",
+    "imgNames": ["port-home.png", "port-home-mobile.png"]
   },
   {
     "id":9,
@@ -324,6 +342,8 @@
         "url": "https://gitrobertpm.github.io/myPortfolio/"
       }
     ],
-    "imgKey": "os"
+    "imgKey": "os",
+    "imgFolder": "earlyyears",
+    "imgNames": ["th-projects.png", "port-2015.png", "port-2016-1.png", "port-2016-2.png", "port-2016-3.png", "port-2017.png"]
   }
 ]

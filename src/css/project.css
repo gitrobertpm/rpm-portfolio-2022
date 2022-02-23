@@ -1,12 +1,4 @@
 
-.projects-container {
-  min-height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 25px;
-  background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 25%, rgba(255, 255, 255, 0.95) 25%, rgba(255, 255, 255, 0.95) 75%, transparent 75%);
-  background-attachment: fixed;
-}
-
 .projects-retainer {
   width: 100%;
   max-width: 1024px;
@@ -16,12 +8,19 @@
 .project {
   max-width: 1024px;
   padding: 25px;
-  margin: 35px auto;
+  margin: 10px auto 35px;
   color: white;
-  background: rgba(0, 0, 10, 0.9);
+  background: rgba(0, 0, 10, 0.95);
   border-bottom: 1px solid rgba(0, 191, 255, 0.1);
   box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.1);
   transition: all 0.4s ease-out;
+  opacity: 0.5;
+  animation: projFadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes projFadeIn {
+  0% {opacity: 0.5}
+  100% {opacity: 1}
 }
 
 .project:hover {
@@ -31,6 +30,7 @@
 
 .project-title {
   color: tomato;
+  transition: all 0.4s ease-out;
 }
 
 .project h3 {
@@ -42,9 +42,11 @@
   text-align: left;
   padding-left: 15px;
   margin: 35px auto;
+  transition: all 0.4s ease-out;
 }
 
 .project li {
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
   margin: 7px auto;
 }
 
@@ -58,11 +60,14 @@
 }
 
 .proj-img-box {
+  max-height: 575px;
   padding-top: 30px;
   padding-bottom: 30px;
   background: rgba(250, 250, 255, 0.99);
   border-radius: 4px 4px 0 0;
   border-bottom: 3px solid tomato;
+  transition: all 0.4s ease-out;
+  overflow: auto;
 }
 
 .project img {
@@ -87,7 +92,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  padding-top: 50px;
+  padding-top: 107px;
   background:rgba(0, 0, 50, 0.7);
   z-index: 9999;
   transition: all 0.4s ease-out;
@@ -106,12 +111,13 @@
 }
 
 .modal button {
+  position: fixed;
   cursor: pointer;
   color: tomato;
   font-weight: bolder;
   display: block;
   position: fixed;
-  top: 8px;
+  top: 115px;
   right: 8px;
   width: 42px;
   height: 42px;
