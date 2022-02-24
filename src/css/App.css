@@ -148,6 +148,19 @@
   margin-left: 0;
 }
 
+.not-found-heading {
+  width: calc(100% - 20px);
+  max-width: 1024px;
+  margin-top: 75px;
+}
+
+.not-found p {
+  font-size: 1.5rem;
+  text-shadow: 0 1px 0 tomato;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 25px auto 0;
+}
+
 .first {
   animation-delay: 0.5s;
 }
