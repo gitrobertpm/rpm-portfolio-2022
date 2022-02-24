@@ -18,6 +18,7 @@ const Home = () => {
 
 	return (
 		<React.Fragment>
+			<div className="curtain"></div>	
 			<header className="App-header">
 
 				<h1 className="animate__animated animate__zoomIn customDuration first">Robert Manolis</h1>
@@ -35,7 +36,7 @@ const Home = () => {
 				<br />
 				<div className="down-arrow" />
 
-				<div className="curtain"></div>	
+				
 
 			</header>
 

@@ -1,4 +1,15 @@
 
+.curtain {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background:rgba(0, 0, 10, 1);
+  animation: fadeOut 1s ease-in-out 0.02s forwards, eightySix 0.1s 1.2s forwards;
+  z-index: 9;
+}
+
 .App {
   text-align: center;
 }
@@ -29,16 +40,6 @@
   font-size: calc(10px + 2vmin);
   color: white;
   transition: all 0.3s ease-in-out;
-}
-
-.curtain {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background:rgba(0, 0, 10, 1);
-  animation: fadeOut 1s ease-in-out 0.02s forwards;
 }
 
 .App-header h2 {
@@ -161,6 +162,11 @@
 
 .customDuration {
   animation-duration: 1.5s;
+}
+
+@keyframes eightySix {
+  0% {display: block; z-index: 9;}
+  100% {display: none; z-index: -9;}
 }
 
 @keyframes fadeIn {
