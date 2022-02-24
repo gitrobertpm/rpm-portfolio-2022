@@ -1,9 +1,6 @@
 
 import React from 'react';
 
-/* Component imports */
-import About from './About';
-
 /* Data imports */
 import propsData from '../data/props.json';
 
@@ -13,10 +10,7 @@ import myLogo from '../img/myLogo.svg';
 const Props = () => {
 	return (
 		<div className="about-container">
-			<About />
 			<div className="props">
-
-				{/* <h2 className="top-heading props-heading">Props</h2> */}
 
 				<div className="props-txt-box">
 					<p className="props-txt">{`Where quantitative data ends, qualitative data steps in to shed some light.  The following statements were captured from Slack posts and emails from students I've mentored and teammates I've worked with.`}</p>

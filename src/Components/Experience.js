@@ -2,7 +2,6 @@
 import React from 'react';
 
 /* Component imports */
-import About from './About';
 import ExpItem from './ExpItem';
 
 /* Data imports */
@@ -14,10 +13,7 @@ import myLogo from '../img/myLogo.svg';
 const Experience = () => {
 	return (
 		<div className="about-container">
-			<About />
 			<div className="experience">
-        
-				{/* <h2 className="top-heading experience-heading">Experience</h2> */}
 
 				<div className="exp-item-container">
 

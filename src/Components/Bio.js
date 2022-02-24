@@ -2,9 +2,6 @@
 /* Main dependency imports */
 import React, { useState } from 'react';
 
-/* Component imports */
-import About from './About';
-
 /* Data imports */
 import quotes from '../data/quotes.json';
 
@@ -32,11 +29,9 @@ const Bio = () => {
 
 	return (
 		<div className="about-container">
-			<About />
 			<div className="bio-container">
 
 				<div className="bio">
-					{/* <h2 className="top-heading bio-heading">Bio</h2> */}
 					<h3>~ A bit about me ~</h3>
 
 					<p>Top three priorities at work:</p>

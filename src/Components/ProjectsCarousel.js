@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef } from 'react';
-import { NavLink, useLocation, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate, Navigate } from 'react-router-dom';
 
 /* Component imports */
 import Project from './Project';
@@ -19,10 +19,10 @@ const ProjectsCarousel = () => {
 	const [left, setLeft] = useState(40);
 	const [isEven, setIsEven] = useState(false);
 
-	let navigateTo = useNavigate();
-	let location = useLocation();
-	let pathname = location.pathname;
-	let projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
+	const navigateTo = useNavigate();
+	const location = useLocation();
+	const pathname = location.pathname;
+	const projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
 
 	// Convert title to pathlike strings
 	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
@@ -43,6 +43,7 @@ const ProjectsCarousel = () => {
 	// Update display
 	useEffect(() => {
 
+		// Handle menu positioning based on width and number of projects
 		const width = getWidth(projectMenuElement.current);
 		const total = projectPaths.length;
 		const half = Math.round(total / 2);
@@ -54,10 +55,6 @@ const ProjectsCarousel = () => {
 
 		setLeft(`${offset}px`);
 		setIsEven(!isEven);
-
-		if (projectPathname === 'projects') {
-			return navigateTo(`/projects/${currentProjectPath}`);
-		}
 
 		if (projectPathname !== currentProjectPath) {
 			return setCurrentProjectPath(projectPathname);
@@ -91,8 +88,6 @@ const ProjectsCarousel = () => {
 			
 			<div className="projects-retainer">
 
-				{/* <h1 className="top-heading projects-heading">Projects</h1> */}
-
 				<div className="projects-menu-wrapper">
 					<div className="projects-menu" ref={ projectMenuElement }>
 						<button className="project-menu-left" onClick={ handleLeftClick }>{`<`}</button>
@@ -106,12 +101,7 @@ const ProjectsCarousel = () => {
 											className="project-menu-project-link" 
 											key={ `${i} - ${proj.title}` }
 											style={{ backgroundImage: `url(${imgObj[proj.imgKey][0]})`, backgroundSize: 100 + '%' }}
-										>
-											{/* <div className="project-menu-link-inner-wrapper">
-											<h4 className="project-menu-project-title">{proj.title}</h4>
-											<p className="project-menu-project-short-description">{ proj.shortDescription }</p>
-										</div> */}
-											
+										>											
 										</NavLink>
 									);
 								})
@@ -123,16 +113,20 @@ const ProjectsCarousel = () => {
 
 				<h2 className="top-heading projects-heading">Checkout some of my work</h2>
 
-				<Project 
-					isEven={isEven}
-					id={currentProject.id}
-					title={currentProject.title}
-					shortDescription={currentProject.shortDescription}
-					description={currentProject.description}
-					stack={currentProject.stack}
-					links={currentProject.links}
-					imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
-				/>
+				{
+					projectPaths.includes(projectPathname) ?
+						<Project 
+							isEven={isEven}
+							id={currentProject.id}
+							title={currentProject.title}
+							shortDescription={currentProject.shortDescription}
+							description={currentProject.description}
+							stack={currentProject.stack}
+							links={currentProject.links}
+							imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
+						/> :
+						<Navigate to="/notfound" replace />
+				}
 
 			</div>
 		</div>

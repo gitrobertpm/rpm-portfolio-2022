@@ -2,9 +2,6 @@
 /* Main dependency imports */
 import React, { useState } from 'react';
 
-/* Component imports */
-import About from './About';
-
 /* Image imports */
 import myLogo from '../img/myLogo.svg';
 
@@ -78,10 +75,8 @@ const Contact = () => {
 
 	return (
 		<div className="about-container">
-			<About />
 			<div className="contact">
-
-				{/* <h2 className="top-heading contact-heading">Contact</h2> */}
+			
 				<h3>Send me a message!🙂</h3>
 				<p>Use the form below or email at: <i className="my-email">grobertpm@gmail.com</i></p>
 
