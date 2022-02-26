@@ -32,11 +32,8 @@ const Brochure = () => {
 	return (
 		<div className="brochure">
 			<div className="wallpaper"></div>
-
 			<h2 className="top-heading brochure-heading">Reasons you might want to work with me</h2>
-
 			<div className="diagram">
-
 				<div className="content">
 					<div 
 						className={ `team satellite expandable ${turn === 'first' && 'expanded-satellite'}` } 
@@ -44,7 +41,6 @@ const Brochure = () => {
 						tabIndex="3" 
 						style={{ backgroundImage: `url(${teamworkPic})` }}
 					>
-						
 						<h3>Team Theory</h3>
 						<h4>{`It's all about the team!`}</h4>
 						<ul className={ `${turn === 'first' && 'expanded-ul'}` }>
@@ -108,62 +104,8 @@ const Brochure = () => {
 						<h3>Projects</h3>
 						<p>Peruse <br /><Link to="/projects" onClick={ scroller }> ~ the Projects section ~ </Link> <br />{`to checkout some of the stuff I've been working on.`}</p>
 					</div>
-
 				</div>
 			</div>
-
-			
-
-			{/* <div className="brochure-card">
-				<div className="card-background"></div>
-				<div className="card-background-2"></div>
-				<div className="card-info">
-					<h3>All about the team!</h3>
-					<ul>
-						<li>Easy to work with.</li>
-						<li>Cheering others along.</li>
-						<li>Facing obstacles with optimism.</li>
-						<li>Striving for a healthy work/life balance.</li>
-					</ul>
-				</div>
-				<div className="card-img">
-					<img src="https://via.placeholder.com/250" />
-				</div>
-			</div> */}
-
-			{/* <div className="brochure-card">
-				<div className="card-background"></div>
-				<div className="card-background-2"></div>
-				<div className="card-img">
-					<img src="https://via.placeholder.com/250" />
-				</div>
-				<div className="card-info">
-					<h3>A good web UI is...</h3>
-					<ul>
-						<li>Mobile first and Responsive</li>
-						<li>Legacy and cross browser supportive</li>
-						<li>Accessible and intuitive</li>
-					</ul>
-				</div>
-			</div> */}
-
-			{/* <div className="brochure-card">
-				<div className="card-background"></div>
-				<div className="card-background-2"></div>
-				<div className="card-info">
-					<h3>Dev considerations</h3>
-					<ul>
-						<li>Package management, tree shaking, and bundling</li>
-						<li>Linting, Type checking and test driven development</li>
-						<li>Version control, agile cycles, and continuous integration</li>
-						<li>safe, secure and responsible creations</li>
-					</ul>
-				</div>
-				<div className="card-img">
-					<img src="https://via.placeholder.com/250" />
-				</div>
-			</div> */}
-
 		</div>
 	);
 };
