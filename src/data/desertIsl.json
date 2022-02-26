@@ -1,0 +1,27 @@
+[
+  {
+    "category": "Movies",
+    "details": "Any movie, any genre, a trilogy counts as three",
+    "selections": ["As Good as it gets", "Shawshank Redemption", "Whatever Works", "Uncorked at Satchem Farms", "Joe Versus the Volcano"]
+  },
+  {
+    "category": "Books",
+    "details": "Any book, any genre, trilogies count as three",
+    "selections": ["The Dark Tower part four, Wizard and Glass", "The Tao of Pooh", "Fear and Loathing in Las Vegas", "Complete works of Walt Whitman", "Complete works of William Shakespeare"]
+  },
+  {
+    "category": "Bands",
+    "details": "The complete discography",
+    "selections": ["Pink Floyd", "Led Zeppelin", "The Beatles", "Tenacious D", "The White Stripes", "🖐️🎤😎"]
+  },
+  {
+    "category": "Shows",
+    "details": "All the episodes of your favorite shows",
+    "selections": ["Northern Exposure", "Stranger Things", "Game of Thrones", "Seinfeld", "Friends"]
+  },
+  {
+    "category": "Games",
+    "details": "Board, card, classic, or even video games. Might be a game system there.🤷",
+    "selections": ["Chess - Best game ever.", "Cribbage - Fun game I used to play with my pops.", "Dominoes - Fun game I used to play in a number of suburban garages with many a Cali foursome on those warm afternoons back in the day in the BA.", "Dice - Lots you can do with dice.", "Cards - Uh, three words: Texas Hold 'em.  Plus Spades and Hearts and a bunch of fun other stuff."]
+  }
+]

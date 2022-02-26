@@ -1,25 +1,40 @@
 
 import React from 'react';
+import { useLocation, Navigate } from 'react-router-dom';
 
 /* Component imports */
 import AboutNav from './AboutNav';
+import Bio from './Bio';
+import Experience from './Experience';
+import Contact from './Contact';
+import Props from './Props';
+import ThankYou from './ThankYou';
 
 /* Image imports */
 import github from '../img/icons/gh.png';
 import linkedin from '../img/icons/li.png';
 import profilePic from '../img/profile-pic.jpg';
 
-/* About container component to be shown at the top of the bio, contact, experience, and props components */
 const About = () => {
+
+	const location = useLocation();
+	const pathname = location.pathname;
+	const compPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
+
+	const compMap = {
+		'bio': <Bio />,
+		'experience': <Experience />,
+		'contact': <Contact />,
+		'props': <Props />,
+		'thankyou': <ThankYou /> 
+	};
   
 	return (
 		<div className="overlay">
 			<div className="wallpaper"></div>
 			<div className="about-header">
-
 				<AboutNav />
-        
-				{/* <h1 className="top-heading About-heading">About</h1> */}
+
 				<h2 className="top-heading about-heading">Robert Manolis</h2>
 				<img className="profile-pic" src={ profilePic } alt="Profile pic"/>
 
@@ -28,6 +43,8 @@ const About = () => {
 					<a href="https://www.linkedin.com/in/robertpm/" className="contact-link cl-linkedin"><img src={ linkedin } alt="LinkedIn icon" /></a>
 				</div>
 			</div>
+
+			{ Object.keys(compMap).includes(compPathname) ? compMap[compPathname] : <Navigate to="/notfound" replace /> }
 		</div>
 	);
 };

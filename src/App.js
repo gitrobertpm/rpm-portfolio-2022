@@ -1,20 +1,17 @@
 
-/* Main container component */
-import React, { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+/* Main imports */
+import React from 'react'; 
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 
 /* Component imports */
 import Nav from './Components/Nav';
 import Home from './Components/Home';
-// import Projects from './Components/Projects';
+import About from './Components/About';
 import ProjectsCarousel from './Components/ProjectsCarousel';
-
-
-import Bio from './Components/Bio';
-import Experience from './Components/Experience';
-import Contact from './Components/Contact';
-import Props from './Components/Props';
-import ThankYou from './Components/ThankYou';
 import NotFound from './Components/NotFound';
+
+/* Data imports */
+import projectsData from './data/projects.json';
 
 /* Stylesheets imports */
 import './css/App.css';
@@ -26,32 +23,30 @@ import './css/media-query.css';
 
 /* Main container component - redirects root to home route and handles undefined routes */
 const App = () => {
+
+	// Convert title to pathlike strings
+	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+
+	// Collection of project titles in pathlike form
+	const projectPaths = projectsData.map((proj) => pathify(proj.title));
+
 	return (
 		<BrowserRouter>
 			<div className="App">
-
 				<Nav />
-
 				<Routes>
-					<Route exact path="/" element={ <Navigate to="/home" /> } />
+					<Route exact path="/" element={ <Navigate to="/home" replace /> } />
 					<Route exact path="/home" element={ <Home /> } />
-					<Route exact path="/projects/*" element={ <ProjectsCarousel /> } />
 
-					{/* <Route path="/about/*" element={ <About /> } /> */}
+					<Route exact path="/about/:id" element={ <About /> } />
+					<Route exact path="/about" element={ <Navigate to="/about/bio" replace /> } />
 
-					<Route exact path="/about" element={ <Navigate to="/about/bio" /> } />
-					<Route exact path="/about/bio" element={ <Bio /> } />
-					<Route exact path="/about/experience" element={ <Experience /> } />
-					<Route exact path="/about/contact" element={ <Contact /> } />
-					<Route exact path="/about/props" element={ <Props /> } />
-					<Route exact path="/about/thankyou" element={ <ThankYou /> } />
+					<Route exact path="/projects/:id" element={ <ProjectsCarousel /> } />
+					<Route exact path="/projects" element={ <Navigate to={`/projects/${projectPaths[0]}`} replace /> } />
+					
 					<Route exact path="/notfound" element={ <NotFound /> } />
-          
-					<Route path="/about/*" element={ <NotFound /> } />
-
-					<Route element={ <Navigate to="/notfound" /> } />
+					<Route path="/*" element={ <Navigate to="/notfound" /> } />
 				</Routes>
-        
 			</div>
 		</BrowserRouter>
 	);
