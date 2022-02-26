@@ -69,7 +69,7 @@ const Bio = () => {
 
 	// Deconstruct desert island properties
 	const { category } = curDesertIsland;
-	const { details } = curDesertIsland;
+	// const { details } = curDesertIsland;
 	const { selections } = curDesertIsland;
 	
 	useEffect(() => {
@@ -116,11 +116,11 @@ const Bio = () => {
 						<button className="quote-close-btn" onClick={ handleDesertIslOpen }><strong>X</strong></button>
 						<h2 className="top-heading bio-heading desert-island-heading">Desert Island</h2> 
 						<p className="quote-heading">Trapped on a desert island forever, which five items would you bring?</p>
-						<p className="quote-heading">This game can tell you a lot about a person.  Below are my answers to a few categories.</p>
+						<p className="quote-heading">Responses can tell you a lot about a person.  Below are my answers to a few categories.</p>
 						<p className="quote-heading">Click here to see more.</p>
 						<div className="desert-island-display">
 							<h3 className="di-category">{ category }:</h3>
-							<p className="di-details">{ details }</p>
+							{/* <p className="di-details">{ details }</p> */}
 							<ul className="di-selections">
 								{ selections?.map((sel, i) => <li className="di-selection" key={i}>{sel}</li>) }
 							</ul>
