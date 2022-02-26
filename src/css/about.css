@@ -24,8 +24,19 @@
 }
 
 .about-header .top-heading {
-  max-width: 555px;
+  position: relative;
+  max-width: 850px;
 }
+
+/* .about-heading:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(to top, rgba(255, 0, 0, 0.5) 10%, rgba(255, 99, 71, 0.9) 20%, transparent 75%);
+} */
 
 .about-header .header-contact-link-box {
   display: flex;
@@ -56,20 +67,32 @@
 }
 
 .quote-box {
-  max-width: 1024px;
-  margin: 25px auto 35px;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  bottom: 50%;
+  left: 50%;
+  width: calc(100% -20px);
+  margin: 0 auto;
+  padding: 25px 10px;
+  background:rgba(0, 0, 10, 0.9);
+  transition: all 0.7s ease-in-out;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 999;
+  backdrop-filter: blur(4px);
 }
 
-.quote-heading {
-  color: tomato;
-  font-size: 1.1rem;
-  max-width: 525px;
-  padding-top: 10px;
-  padding-bottom: 30px;
-  padding-left: 5px;
+.open-quote-box {
+  top: 98px;
+  right: 0;
+  bottom: 0px;
+  left: 0;
+  opacity: 1
 }
 
 .quote-display {
+  position: relative;
   cursor: pointer;
   max-width: 788px;
   margin: auto;
@@ -80,17 +103,50 @@
   border-bottom: 2px solid rgba(0, 191, 255, 0.7);
 }
 
-.quote {
+.quote-close-btn {
+  cursor: pointer;
+  font-size: 1.75rem;
+  font-weight: bolder;
+  text-shadow: 1px 1px 0 rgba(0, 0, 10, 0.9);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  background: tomato;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+.quote-display .bio-heading {
+  border: none;
+  margin-top: 0px;
+}
+
+.quote-heading {
+  color: tomato;
+  font-size: 1.1rem;
+  max-width: 600px;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  padding-left: 5px;
+}
+
+.quote,
+.desert-island-display {
   position: relative;
   text-align: justify;
-  font-family: 'Courier New', monospace;
+  font-weight: bolder;
   font-size: 1.1rem;
-  color: white;
+  color: rgba(0, 0, 50, 0.95);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 4px 4px 0 0;
 }
 
 .quote::before {
   position: absolute;
-  margin-left: -15px;
+  margin-left: -10px;
   content: '"';
 }
 
@@ -105,6 +161,34 @@
   margin-top: 5px;
 }
 
+.desert-island-box .quote-heading {
+  max-width: 800px;
+  padding-bottom: 10px;
+}
+
+.di-category {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  width: 69px;
+  margin: 0 5px 0 0;
+}
+
+.di-details {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: lighter;
+  display: inline-block;
+  width: calc(100% - 100px);
+  margin: 0;
+  padding-top: 3px;
+}
+
+.di-selections {
+  font-family: cursive;
+  font-weight: lighter;
+}
+
 .about-menu {
   position: fixed;
   top: 44px;
@@ -116,6 +200,11 @@
   border-bottom: 3px solid rgba(0, 191, 255, 0.7);
   border-bottom: 1px solid rgba(0, 0, 0, 0.9);
   z-index: 999;
+  backdrop-filter: blur(4px);
+}
+
+.about-menu a {
+  padding-top: 7px;
 }
 
 .bio,
@@ -127,6 +216,11 @@
   background: rgba(0, 0, 10, 0.9);
   border-bottom: 2px solid rgba(86, 145, 165, 1);
   box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.1);
+  backdrop-filter: blur(4px);
+}
+
+.bio {
+  position: relative;
 }
 
 .contact {
@@ -137,6 +231,10 @@
 .bio-heading {
   color: rgba(0, 191, 255, 0.99);
   background: none;
+}
+
+.desert-island-heading {
+  max-width: 700px;
 }
 
 .bio h3 {
@@ -150,7 +248,7 @@
 .bio ul {
   text-align: justify;
   padding-right: 30px;
-  padding-left: 75px;
+  padding-left: 25px;
 }
 
 .bio li {
@@ -164,6 +262,37 @@
   display: inline-block; 
   width: 17px;
   margin-left: -17px;
+}
+
+.quote-btn,
+.desert-island-btn {
+  cursor: pointer;
+  text-transform: uppercase;
+  text-shadow: 0 1px 0 rgba(0, 191, 255, 0.9);
+  font-weight: bolder;
+  position: absolute;
+  top: 5px;
+  width: 115px;
+  height: 35px;
+  background: rgba(245, 245, 255, 0.95);
+  border-radius: 3px;
+  border: 2px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 0 rgba(0, 191, 255, 0.9) inset, 0 -2px 0 rgba(0, 191, 255, 0.9) inset;
+  transition: all 0.4s ease-in-out;
+}
+
+.quote-btn {
+  right: 5px;
+}
+
+.desert-island-btn {
+  left: 5px;
+}
+
+.quote-btn:hover,
+.desert-island-btn:hover {
+  text-shadow: 0 1px 0 tomato;
+  box-shadow: 0 2px 0 tomato inset, 0 -2px 0 tomato inset;
 }
 
 .my-logo {
@@ -190,6 +319,7 @@
   border-bottom: 1px solid rgba(0, 191, 255, 0.1);
   box-shadow: 1px 1px 5px rgba(0, 191, 255, 0.1);
   transition: all 0.4s ease-out;
+  backdrop-filter: blur(4px);
 }
 
 .exp-item:hover {
@@ -382,8 +512,9 @@
   text-align: justify;
   width: calc(100% - 60px);
   padding: 25px;
-  background: rgba(250, 250, 255, 0.7);
+  background: rgba(245, 245, 255, 0.5);
   border: 1px solid white;
+  backdrop-filter: blur(4px);
 }
 
 .prop-box {
@@ -394,6 +525,7 @@
   padding-right: 25px;
   background:rgba(0, 0, 10, 0.9);
   border-bottom: 2px solid tomato;
+  backdrop-filter: blur(4px);
 }
 
 .prop-info-box {
