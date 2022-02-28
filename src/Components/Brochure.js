@@ -9,25 +9,54 @@ import designPic from '../img/backgrounds/design-2.png';
 
 const Brochure = () => {
 
+	// Scroll to top helper function
+	const scroller = () => window.scrollTo(0, 0);
+
 	const first = useRef(null);
 	const second = useRef(null);
 	const third = useRef(null);
 
 	const [turn, setTurn] = useState('first');
+	const [lastTurn, setLastTurn] = useState('');
+	const [isAnimated, setIsAnimated] = useState(0);
+
+	const GreenCheck = (prop) => {
+		return (
+			<span 
+				className="green-check"
+				style={{animation: turn === prop.turn && `gc ${0.3}s ${prop.timer}s forwards`}}
+			>{prop.icon}</span>
+		);
+	};
 
 	const updateTurn = () => setTurn((prev) => prev === 'first'? 'second' : prev === 'second' ? 'third' : 'first');
 
+	let interval;
+
 	useEffect(() => {
-		if (window.innerWidth > 767) {
-			const interval = setInterval(() => {
+		if (window.innerWidth > 767 && !isAnimated) {
+			interval = setInterval(() => {
 				updateTurn();
-			}, 5000);
+			}, 3000);
 			return () => clearInterval(interval);
 		}
-	}, [turn, window.innerWidth]);
+	});
 
-	// Scroll to top function
-	const scroller = () => window.scrollTo(0, 0);
+	// Handle user interaction of lists and turning the animation on and off
+	const handleEnter = () => {
+		setLastTurn(turn);
+		setTurn(null);
+		setIsAnimated(1);
+		clearInterval(interval);
+	};
+
+	const handleExit = () => {
+		setTurn(lastTurn);
+		setLastTurn('');
+		setIsAnimated(0);
+	};
+
+	const gct = 0.3;
 
 	return (
 		<div className="brochure">
@@ -40,49 +69,55 @@ const Brochure = () => {
 						ref={ first } 
 						tabIndex="3" 
 						style={{ backgroundImage: `url(${teamworkPic})` }}
+						onMouseEnter={ handleEnter }
+						onMouseLeave={ handleExit }
 					>
 						<h3>Team Theory</h3>
 						<h4>{`It's all about the team!`}</h4>
 						<ul className={ `${turn === 'first' && 'expanded-ul'}` }>
-							<li>Be easy to work with</li>
-							<li>Cheer others along</li>
-							<li>Face obstacles with optimism</li>
-							<li>Foster a culture of support</li>
-							<li>Strive for a healthy work/life balance</li>
+							<li><GreenCheck turn="first" icon="✅" timer={gct}/> Be easy to work with</li>
+							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.1}/> Cheer others along</li>
+							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.2}/> Face obstacles with optimism</li>
+							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.3}/> Foster a culture of support</li>
+							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.4}/> Strive for a healthy work/life balance</li>
 						</ul>
 					</div>
 
 					<div 
-						className={ `design satellite expandable ${turn === 'second' && 'expanded-satellite'}` } 
+						className={ `design satellite expandable ${turn === 'third' && 'expanded-satellite'}` } 
 						ref={ second } 
 						tabIndex="4" 
 						style={{ backgroundImage: `url(${designPic})` }}
+						onMouseEnter={ handleEnter }
+						onMouseLeave={ handleExit }
 					>
 						<h3>Design</h3>
 						<h4>A good web UI is...</h4>
-						<ul className={ `${turn === 'second' && 'expanded-ul'}` }>
-							<li>Mobile first and Responsive</li>
-							<li>Legacy and cross browser supportive</li>
-							<li>Accessible and intuitive</li>
-							<li>Unobtrusive and progressively enhanced</li>
-							<li>Built to fail gracefully where needed</li>
+						<ul className={ `${turn === 'third' && 'expanded-ul'}` }>
+							<li><GreenCheck turn="third" icon="🎨" timer={gct}/> Mobile first and Responsive</li>
+							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.1}/> Legacy and cross browser supportive</li>
+							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.2}/> Accessible and intuitive</li>
+							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.3}/> Unobtrusive and progressively enhanced</li>
+							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.4}/> Built to fail gracefully where needed</li>
 						</ul>
 					</div>
 
 					<div 
-						className={ `development satellite expandable ${turn === 'third' && 'expanded-satellite'}` } 
+						className={ `development satellite expandable ${turn === 'second' && 'expanded-satellite'}` } 
 						ref={ third } 
 						tabIndex="5"
 						style={{ backgroundImage: `url(${devPic})` }}
+						onMouseEnter={ handleEnter }
+						onMouseLeave={ handleExit }
 					>
 						<h3>Dev</h3>
 						<h4>Process is paramount</h4>
-						<ul className={ `${turn === 'third' && 'expanded-ul'}` }>
-							<li>Package management, tree shaking, and bundling</li>
-							<li>Linting, type checking and test driven development</li>
-							<li>Version control, agile cycles, and continuous integration</li>
-							<li>DRY, modular and extensible code</li>
-							<li>Safe, secure and responsible creations</li>
+						<ul className={ `${turn === 'second' && 'expanded-ul'}` }>
+							<li><GreenCheck turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li>
+							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.1}/> Linting, type checking and test driven development</li>
+							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.2}/> Version control, agile cycles, and continuous integration</li>
+							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.3}/> DRY, modular and extensible code</li>
+							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.4}/> Safe, secure and responsible creations</li>
 						</ul>
 					</div>
 

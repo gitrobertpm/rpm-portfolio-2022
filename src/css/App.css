@@ -133,6 +133,12 @@
   z-index: -1;
 }
 
+@-moz-document url-prefix() {
+  .wallpaper {
+    background: rgba(255, 255, 255, 0.9);
+  }
+}
+
 .banner {
   display: none;
 }
