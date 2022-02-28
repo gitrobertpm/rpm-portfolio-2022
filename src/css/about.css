@@ -121,6 +121,7 @@
 .quote-display .bio-heading {
   border: none;
   margin-top: 0px;
+  max-width: 150px
 }
 
 .quote-heading {
