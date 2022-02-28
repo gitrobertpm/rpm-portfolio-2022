@@ -139,7 +139,6 @@
   .satellite ul {
     position: absolute;
     text-align: left;
-    list-style-type: tilde;
     top: 125px;
     left: 125px;
     width: 0;
@@ -152,6 +151,12 @@
     transition: all 0.4s ease-in-out;
     opacity: 0;
     overflow: auto;
+  }
+
+  @-moz-document url-prefix() {
+    .satellite ul {
+      background: rgba(255, 255, 255, 0.9);
+    }
   }
 
   .expandable ul {
@@ -384,6 +389,10 @@
     margin-right: 30px;
   }
 
+  .desert-island-heading {
+    max-width: 400px;
+  }
+
   .bio,
   .contact {
     padding: 35px;
@@ -468,7 +477,7 @@
   }
 
   .diagram {
-    padding: 400px 0;
+    padding: 400px 0 275px;
   }
 
   .konector-1 {
@@ -521,18 +530,18 @@
   }
 
   .satellite ul {
-    padding: 5px 10px 5px 25px;
+    padding: 5px 10px 5px 5px;
   }
 
   .expandable:active > ul,
   .expandable:focus > ul,
   .expandable:hover > ul {
-    width: calc(100% - 35px);
+    width: calc(100% - 15px);
     height: 260px; 
   }
 
   .expandable .expanded-ul {
-    width: calc(100% - 35px);
+    width: calc(100% - 15px);
     height: 260px;
   }
   
@@ -542,23 +551,23 @@
   }
 
   .design {
-    top: -185px;
+    top: -300px;
     margin-left: -505px
   }
   
   .development {
-    top: -185px;
+    top: -300px;
     margin-left: 205px;
   }
   
   .me {
-    top: 135px;
-    margin-left: -355px;
+    top: 5px;
+    margin-left: -385px;
   }
   
   .my-projects {
-    top: 135px;
-    margin-left: 55px;
+    top: 5px;
+    margin-left: 75px;
   }
 
 
