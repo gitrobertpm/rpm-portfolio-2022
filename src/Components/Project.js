@@ -16,7 +16,7 @@ const Project = (props) => {
 	const handleModal = () => setModOpen(!modOpen);
 
 	return (
-		<div className={props.isEven ? 'project isEven' : 'project isOdd'} key={ props.id }>
+		<div className={props.isEven ? 'project isEven' : 'project isOdd'}>
       
 			<h2 className="project-title flex-child">{props.title}</h2>
 
@@ -31,7 +31,7 @@ const Project = (props) => {
 						props.imgs && 
 						props.imgs.map((img, i) => { 
 							return (
-								<img src={ img } alt="Project screenshot" key={i} onClick={ handleModal } /> 
+								<img src={ img } alt="Project screenshot" key={ `${i}-${props.description[i]}-${Math.random() * i}` } onClick={ handleModal } /> 
 							);
 						})
 					}
@@ -41,7 +41,7 @@ const Project = (props) => {
 			<div className="proj-link-wrapper flex-child">
 				{
 					props.links &&
-					props.links.map((link, i) => <a href={ link.url } target="_blank" rel="noreferrer" key={i}>{link.name}</a>)
+					props.links.map((link, i) => <a href={ link.url } target="_blank" rel="noreferrer" key={ `${i}-${props.description[i]}-${Math.random() * i}` }>{link.name}</a>)
 				}
 			</div>
 
@@ -50,7 +50,7 @@ const Project = (props) => {
 				<ul>
 					{
 						props.stack &&
-            props.stack.map((tech, i) => <li className="project-stack-item" key={i}>{ tech }</li>)
+            props.stack.map((tech, i) => <li className="project-stack-item" key={ `${i}-${props.description[i]}-${Math.random() * i}` }>{ tech }</li>)
 					}
 				</ul>
 			</div>
@@ -59,7 +59,7 @@ const Project = (props) => {
 				<h3>Description</h3>
 				{
 					props.description && 
-          props.description.map((desc, i) => <ReactMarkdown className="project-description" key={i}>{ desc }</ReactMarkdown>)
+          props.description.map((desc, i) => <ReactMarkdown className="project-description" key={ `${i}-${props.description[i]}-${Math.random() * i}` }>{ desc }</ReactMarkdown>)
 				}
 			</div>
 		</div>

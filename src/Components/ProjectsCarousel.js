@@ -99,7 +99,7 @@ const ProjectsCarousel = () => {
 											to={`/projects/${pathify(proj.title)}`} 
 											onClick={ scroller }
 											className="project-menu-project-link" 
-											key={ `${i} - ${proj.title}` }
+											key={ `${i}-${proj.title}` }
 											style={{ backgroundImage: `url(${imgObj[proj.imgKey][0]})`, backgroundSize: 100 + '%' }}
 										>											
 										</NavLink>

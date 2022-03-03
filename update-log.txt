@@ -1,0 +1,13 @@
+
+3/3/2022
+Branch/Issue: fix-anti-patterns
+Details:
+1. Remove nested components in Brochure.js
+
+2. When rendering via loops, use more than just the variable index for the keys:
+
+ - In ul in Bio.js
+ - ExpItem in Experience.js
+ - In ul in ExpItem.js
+ - In multiple locations in Project.js and ProjectCarousel.js
+ - In "prop-box" div in Props.js

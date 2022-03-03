@@ -1,11 +1,29 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+
 
 import profilePic from '../img/profile-pic.jpg';
 import teamworkPic from '../img/backgrounds/teamwork.png';
 import devPic from '../img/backgrounds/dev-2.png';
 import designPic from '../img/backgrounds/design-2.png';
+
+const GreenCheck = (prop) => {
+	return (
+		<span 
+			className="green-check"
+			style={{animation: prop.handle === prop.turn && `gc ${0.3}s ${prop.timer}s forwards`}}
+		>{prop.icon}</span>
+	);
+};
+
+GreenCheck.propTypes = {
+	handle: PropTypes.string,
+	turn: PropTypes.string,
+	timer: PropTypes.number,
+	icon: PropTypes.string
+};
 
 const Brochure = () => {
 
@@ -19,15 +37,6 @@ const Brochure = () => {
 	const [turn, setTurn] = useState('first');
 	const [lastTurn, setLastTurn] = useState('');
 	const [isAnimated, setIsAnimated] = useState(0);
-
-	const GreenCheck = (prop) => {
-		return (
-			<span 
-				className="green-check"
-				style={{animation: turn === prop.turn && `gc ${0.3}s ${prop.timer}s forwards`}}
-			>{prop.icon}</span>
-		);
-	};
 
 	const updateTurn = () => setTurn((prev) => prev === 'first'? 'second' : prev === 'second' ? 'third' : 'first');
 
@@ -75,11 +84,11 @@ const Brochure = () => {
 						<h3>Team Theory</h3>
 						<h4>{`It's all about the team!`}</h4>
 						<ul className={ `${turn === 'first' && 'expanded-ul'}` }>
-							<li><GreenCheck turn="first" icon="✅" timer={gct}/> Be easy to work with</li>
-							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.1}/> Cheer others along</li>
-							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.2}/> Face obstacles with optimism</li>
-							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.3}/> Foster a culture of support</li>
-							<li><GreenCheck turn="first" icon="✅" timer={gct + 0.4}/> Strive for a healthy work/life balance</li>
+							<li><GreenCheck handle={ turn } turn="first" icon="✅" timer={gct}/> Be easy to work with</li>
+							<li><GreenCheck handle={ turn } turn="first" icon="✅" timer={gct + 0.1}/> Cheer others along</li>
+							<li><GreenCheck handle={ turn } turn="first" icon="✅" timer={gct + 0.2}/> Face obstacles with optimism</li>
+							<li><GreenCheck handle={ turn } turn="first" icon="✅" timer={gct + 0.3}/> Foster a culture of support</li>
+							<li><GreenCheck handle={ turn } turn="first" icon="✅" timer={gct + 0.4}/> Strive for a healthy work/life balance</li>
 						</ul>
 					</div>
 
@@ -94,11 +103,11 @@ const Brochure = () => {
 						<h3>Design</h3>
 						<h4>A good web UI is...</h4>
 						<ul className={ `${turn === 'third' && 'expanded-ul'}` }>
-							<li><GreenCheck turn="third" icon="🎨" timer={gct}/> Mobile first and Responsive</li>
-							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.1}/> Legacy and cross browser supportive</li>
-							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.2}/> Accessible and intuitive</li>
-							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.3}/> Unobtrusive and progressively enhanced</li>
-							<li><GreenCheck turn="third" icon="🎨" timer={gct + 0.4}/> Built to fail gracefully where needed</li>
+							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct}/> Mobile first and Responsive</li>
+							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct + 0.1}/> Legacy and cross browser supportive</li>
+							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct + 0.2}/> Accessible and intuitive</li>
+							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct + 0.3}/> Unobtrusive and progressively enhanced</li>
+							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct + 0.4}/> Built to fail gracefully where needed</li>
 						</ul>
 					</div>
 
@@ -113,11 +122,11 @@ const Brochure = () => {
 						<h3>Dev</h3>
 						<h4>Process is paramount</h4>
 						<ul className={ `${turn === 'second' && 'expanded-ul'}` }>
-							<li><GreenCheck turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li>
-							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.1}/> Linting, type checking and test driven development</li>
-							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.2}/> Version control, agile cycles, and continuous integration</li>
-							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.3}/> DRY, modular and extensible code</li>
-							<li><GreenCheck turn="second" icon="⚙️" timer={gct + 0.4}/> Safe, secure and responsible creations</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.1}/> Linting, type checking and test driven development</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.2}/> Version control, agile cycles, and continuous integration</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.3}/> DRY, modular and extensible code</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.4}/> Safe, secure and responsible creations</li>
 						</ul>
 					</div>
 
