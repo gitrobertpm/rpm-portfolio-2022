@@ -5,7 +5,7 @@ import PropTypes, { arrayOf } from 'prop-types';
 const ExpItem = (props) => {
 
 	return (
-		<div className="exp-item" key={ props.id }>
+		<div className="exp-item">
       
 			<p className="exp-date">{ props.date }</p>
 			<h2 className="exp-company">{ props.company }</h2>
@@ -21,7 +21,7 @@ const ExpItem = (props) => {
 						{
 							props.bullets.points.map((point, i) => {
 								return (
-									<li className="exp-bullets-point" key={i}>{ point }</li>
+									<li className="exp-bullets-point" key={ `${i}-${props.title}-${point}` }>{ point }</li>
 								); 
 							})
 						}

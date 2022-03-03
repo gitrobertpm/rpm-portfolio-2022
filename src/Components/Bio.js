@@ -122,14 +122,14 @@ const Bio = () => {
 							<h3 className="di-category">{ category }:</h3>
 							{/* <p className="di-details">{ details }</p> */}
 							<ul className="di-selections">
-								{ selections?.map((sel, i) => <li className="di-selection" key={i}>{sel}</li>) }
+								{ selections?.map((sel, i) => <li className="di-selection" key={`${i}-sel`}>{ sel }</li>) }
 							</ul>
 						</div>
 						
 					</div>
 				</div>
 			</div>
-			<img className="my-logo" src={myLogo} alt="My Logo" />
+			<img className="my-logo" src={ myLogo } alt="My Logo" />
 		</div>
 	); 
 };

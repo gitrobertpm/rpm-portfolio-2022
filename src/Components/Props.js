@@ -19,7 +19,7 @@ const Props = () => {
 				{
 					propsData.map((prop, i) => {
 						return (
-							<div className="prop-box" key={i}>
+							<div className="prop-box" key={ `${i}-${prop.date}-${prop.name}-${prop.prop.slice(0,9)}` }>
 								<ul className="prop-info-box">
 									<li className="prop-date">{ prop.date }</li>
 									<li className="prop-role">{ prop.role }</li>

@@ -22,7 +22,7 @@ const Experience = () => {
 							return ( 
 								<ExpItem 
 									id={ ei.id }
-									key={ i }
+									key={ `${i}-${ei.id}-${ei.title}` }
 									date={ ei.date }
 									company={ ei.company }
 									title={ ei.title }
