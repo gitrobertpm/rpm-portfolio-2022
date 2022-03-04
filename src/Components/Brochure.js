@@ -3,8 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-
-import profilePic from '../img/profile-pic.jpg';
+import myLogo from '../img/myLogo.svg';
 import teamworkPic from '../img/backgrounds/teamwork.png';
 import devPic from '../img/backgrounds/dev-2.png';
 import designPic from '../img/backgrounds/design-2.png';
@@ -131,7 +130,7 @@ const Brochure = () => {
 					</div>
 
 					<div className="center">
-						<img className="profile-pic home-profile-pic" src={ profilePic } alt="Profile pic"/>
+						<img className="my-logo" src={ myLogo } alt="My Logo" />
 						<span className="konector konector-1"></span>
 						<span className="konector konector-2"></span>
 						<span className="konector konector-3"></span>
