@@ -94,6 +94,12 @@
   backdrop-filter: blur(4px);
 }
 
+.me, 
+.my-projects {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+
 @-moz-document url-prefix() {
   .satellite ul {
     background: rgba(255, 255, 255, 0.9);
@@ -102,13 +108,13 @@
 
 .green-check {
   display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-bottom: -3px;
+  width: 20px;
+  height: 19px;
+  margin-bottom: -2px;
   overflow: hidden;
 }
 
 @keyframes gc {
   0% {width: 0px; height: 0px; opacity: 0}
-  100% {width: 18px; height: 18px; opacity: 1}
+  100% {width: 20px; height: 19px; opacity: 1}
 }

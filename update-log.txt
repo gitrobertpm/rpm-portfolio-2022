@@ -11,3 +11,21 @@ Details:
  - In ul in ExpItem.js
  - In multiple locations in Project.js and ProjectCarousel.js
  - In "prop-box" div in Props.js
+
+ DONE: 3/3/2022
+
+
+
+3/3/2022
+Branch/Issue: fix-anti-patterns
+Details:
+
+1. Landing page updates:
+ - Try horizontal layout for landing page on desktop screen sizes.
+ - Try profile pic up from center of cards to landing page.
+ - Try adding large animated logo to landing page.
+ - Add logo in the center of cards.
+
+2. Right side of list icons are being cut off by display on home page
+
+3. Backdrop filter for "Me" and "Projects" cards on home page

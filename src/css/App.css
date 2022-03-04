@@ -30,21 +30,53 @@
 
 .App-header {
   position: relative;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  min-height: calc(100vh - 150px);
+  padding-top: 75px;
+  padding-bottom: 75px;
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
   background-color: #282c34;
   background-image: url('../img/wallpaper.png');
   background-repeat: repeat;
-  min-height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+.App-header-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
   transition: all 0.3s ease-in-out;
 }
 
+.home-header-logo-box {
+  display: none;
+}
+
+.App-header h1 {
+  text-shadow: 0 1px 0 tomato;
+}
+
 .App-header h2 {
+  font-size: 2rem;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.App-header-wrap h4 {
+  font-size: 1.25rem;
+  text-shadow: 0 1px 0 tomato;
+}
+
+.App-header-wrap h5 {
+  font-size: 1rem;
+}
+
+.App-header-wrap h5 code {
+  font-size: 1rem;
 }
 
 .header-contact-link-box {
@@ -54,7 +86,7 @@
   flex-flow: row;
   justify-content: space-between;
   width: 150px;
-  margin-bottom: 25px;
+  margin: 25px auto;
 }
 
 .header-contact-link-box a {
@@ -95,12 +127,18 @@
 .down-arrow {
   position: absolute;
   bottom: 0px;
+  left: 50%;
   content: '';
   width: 0;
   height: 0;
+  margin-left: -25px;
   border: 25px solid transparent;
   border-top-color: deepskyblue;
   animation: scrollCall 2s ease-out infinite;
+}
+
+.home-profile-pic {
+  display: none;
 }
 
 @keyframes scrollCall {
