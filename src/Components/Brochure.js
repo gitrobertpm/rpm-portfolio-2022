@@ -121,11 +121,11 @@ const Brochure = () => {
 						<h3>Dev</h3>
 						<h4>Process is paramount</h4>
 						<ul className={ `${turn === 'second' && 'expanded-ul'}` }>
-							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li>
-							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.1}/> Linting, type checking and test driven development</li>
-							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.2}/> Version control, agile cycles, and continuous integration</li>
-							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.3}/> DRY, modular and extensible code</li>
-							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.4}/> Safe, secure and responsible creations</li>
+							{/* <li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li> */}
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct}/> Linting, type checking and test driven development</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.1}/> Version control, agile cycles, and continuous integration</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.2}/> DRY, modular and extensible code</li>
+							<li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct + 0.3}/> Safe, secure and responsible creations</li>
 						</ul>
 					</div>
 

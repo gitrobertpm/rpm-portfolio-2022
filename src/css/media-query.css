@@ -520,18 +520,18 @@
     padding: 0;
     background: none;
     filter: opacity(1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9));
-    transform-style: preserve-3d;
+    /* transform-style: preserve-3d;
     transform-origin: center;
-    transform: rotateY(0deg);
-    animation: logoFade 42s linear infinite;
+    transform: rotateY(0deg); */
+    animation: logoFade 5s linear infinite;
   }
 
   @keyframes logoFade {
-    0% {filter: opacity(1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9)); transform: rotateY(0deg)}
-    25% {filter: opacity(0.1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9))}
+    0% {filter: opacity(1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9))}
+    25% {filter: opacity(0.9) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9))}
     50% {filter: opacity(1) drop-shadow(1px 1px 1px rgba(255, 99, 71, 0.9))}
-    75% {filter: opacity(0.1) drop-shadow(1px 1px 1px rgba(255, 99, 71, 0.9))}
-    100% {filter: opacity(1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9)); transform: rotateY(360deg)}
+    75% {filter: opacity(0.9) drop-shadow(1px 1px 1px rgba(255, 99, 71, 0.9))}
+    100% {filter: opacity(1) drop-shadow(1px 1px 1px rgba(0, 191, 255, 0.9))}
   }
 
   .home-title-box {
