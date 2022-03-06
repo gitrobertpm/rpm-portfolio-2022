@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+		"jsx": "react",
+    "target": "ES3",
+    "outDir": "dist",
+    "esModuleInterop": true,
+    "resolveJsonModule": true
+  }
+}
