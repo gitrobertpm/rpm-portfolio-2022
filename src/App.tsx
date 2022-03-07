@@ -25,7 +25,7 @@ import './css/media-query.css';
 const App = () => {
 
 	// Convert title to pathlike strings
-	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+	const pathify = (str: string): string => str.trim().toLowerCase().replaceAll(' ', '-');
 
 	// Collection of project titles in pathlike form
 	const projectPaths = projectsData.map((proj) => pathify(proj.title));
