@@ -17,7 +17,7 @@ Details:
 
 
 3/3/2022
-Branch/Issue: fix-anti-patterns
+Branch/Issue: Home page layout and style
 Details:
 
 1. Landing page updates:
@@ -29,3 +29,8 @@ Details:
 2. Right side of list icons are being cut off by display on home page
 
 3. Backdrop filter for "Me" and "Projects" cards on home page
+
+
+3/5/2022
+Branch/Issue: TypeScript
+Details:
