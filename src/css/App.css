@@ -35,10 +35,6 @@
   min-height: calc(100vh - 150px);
   padding-top: 75px;
   padding-bottom: 75px;
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   background-color: #282c34;
   background-image: url('../img/wallpaper.png');
   background-repeat: repeat;
@@ -150,7 +146,6 @@
 
 .top-heading {
   width: calc(100% - 10px);
-  max-width: 300px;
   margin: 30px auto 15px;
   padding: 15px 0;
   background: rgba(245, 245, 255, 0.5);

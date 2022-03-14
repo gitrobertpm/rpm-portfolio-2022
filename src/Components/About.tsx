@@ -15,13 +15,17 @@ import github from '../img/icons/gh.png';
 import linkedin from '../img/icons/li.png';
 import profilePic from '../img/profile-pic.jpg';
 
-const About = () => {
+const About = (): JSX.Element => {
 
 	const location = useLocation();
 	const pathname = location.pathname;
 	const compPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
 
-	const compMap = {
+	interface compMapTypes {
+		[key: string]: JSX.Element,
+	}
+
+	const compMap: compMapTypes = {
 		'bio': <Bio />,
 		'experience': <Experience />,
 		'contact': <Contact />,

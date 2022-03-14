@@ -25,7 +25,7 @@ import './css/media-query.css';
 const App = () => {
 
 	// Convert title to pathlike strings
-	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+	const pathify = (str: string): string => str.trim().toLowerCase().replaceAll(' ', '-');
 
 	// Collection of project titles in pathlike form
 	const projectPaths = projectsData.map((proj) => pathify(proj.title));
@@ -35,16 +35,16 @@ const App = () => {
 			<div className="App">
 				<Nav />
 				<Routes>
-					<Route exact path="/" element={ <Navigate to="/home" replace /> } />
-					<Route exact path="/home" element={ <Home /> } />
+					<Route path="/" element={ <Navigate to="/home" replace /> } />
+					<Route path="/home" element={ <Home /> } />
 
-					<Route exact path="/about/:id" element={ <About /> } />
-					<Route exact path="/about" element={ <Navigate to="/about/bio" replace /> } />
+					<Route path="/about/:id" element={ <About /> } />
+					<Route path="/about" element={ <Navigate to="/about/bio" replace /> } />
 
-					<Route exact path="/projects/:id" element={ <ProjectsCarousel /> } />
-					<Route exact path="/projects" element={ <Navigate to={`/projects/${projectPaths[0]}`} replace /> } />
+					<Route path="/projects/:id" element={ <ProjectsCarousel /> } />
+					<Route path="/projects" element={ <Navigate to={`/projects/${projectPaths[0]}`} replace /> } />
 					
-					<Route exact path="/notfound" element={ <NotFound /> } />
+					<Route path="/notfound" element={ <NotFound /> } />
 					<Route path="/*" element={ <Navigate to="/notfound" /> } />
 				</Routes>
 			</div>

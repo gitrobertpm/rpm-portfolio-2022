@@ -1,45 +1,45 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import myLogo from '../img/myLogo.svg';
 import teamworkPic from '../img/backgrounds/teamwork.png';
 import devPic from '../img/backgrounds/dev-2.png';
 import designPic from '../img/backgrounds/design-2.png';
 
-const GreenCheck = (prop) => {
+interface GreenCheckTypes {
+	handle: string | null;
+	turn: string;
+	icon: string;
+	timer: number;
+}
+
+const GreenCheck = (prop: GreenCheckTypes): JSX.Element => {
+	const anie: string = prop.handle === prop.turn ? `gc ${0.3}s ${prop.timer}s forwards` : 'none';
 	return (
 		<span 
 			className="green-check"
-			style={{animation: prop.handle === prop.turn && `gc ${0.3}s ${prop.timer}s forwards`}}
+			style={{animation: anie}}
 		>{prop.icon}</span>
 	);
 };
 
-GreenCheck.propTypes = {
-	handle: PropTypes.string,
-	turn: PropTypes.string,
-	timer: PropTypes.number,
-	icon: PropTypes.string
-};
-
-const Brochure = () => {
+const Brochure = (): JSX.Element => {
 
 	// Scroll to top helper function
 	const scroller = () => window.scrollTo(0, 0);
 
-	const first = useRef(null);
-	const second = useRef(null);
-	const third = useRef(null);
+	const first = useRef<null | HTMLDivElement>(null);
+	const second = useRef<null | HTMLDivElement>(null);
+	const third = useRef<null | HTMLDivElement>(null);
 
-	const [turn, setTurn] = useState('first');
-	const [lastTurn, setLastTurn] = useState('');
-	const [isAnimated, setIsAnimated] = useState(0);
+	const [turn, setTurn] = useState<string | null>('first');
+	const [lastTurn, setLastTurn] = useState<React.SetStateAction<string | null>>('');
+	const [isAnimated, setIsAnimated] = useState<boolean>(false);
 
 	const updateTurn = () => setTurn((prev) => prev === 'first'? 'second' : prev === 'second' ? 'third' : 'first');
 
-	let interval;
+	let interval: ReturnType<typeof setInterval>;
 
 	useEffect(() => {
 		if (window.innerWidth > 767 && !isAnimated) {
@@ -54,14 +54,14 @@ const Brochure = () => {
 	const handleEnter = () => {
 		setLastTurn(turn);
 		setTurn(null);
-		setIsAnimated(1);
+		setIsAnimated(true);
 		clearInterval(interval);
 	};
 
 	const handleExit = () => {
 		setTurn(lastTurn);
 		setLastTurn('');
-		setIsAnimated(0);
+		setIsAnimated(false);
 	};
 
 	const gct = 0.3;
@@ -75,7 +75,7 @@ const Brochure = () => {
 					<div 
 						className={ `team satellite expandable ${turn === 'first' && 'expanded-satellite'}` } 
 						ref={ first } 
-						tabIndex="3" 
+						tabIndex={ 3 } 
 						style={{ backgroundImage: `url(${teamworkPic})` }}
 						onMouseEnter={ handleEnter }
 						onMouseLeave={ handleExit }
@@ -94,7 +94,7 @@ const Brochure = () => {
 					<div 
 						className={ `design satellite expandable ${turn === 'third' && 'expanded-satellite'}` } 
 						ref={ second } 
-						tabIndex="4" 
+						tabIndex={ 4 } 
 						style={{ backgroundImage: `url(${designPic})` }}
 						onMouseEnter={ handleEnter }
 						onMouseLeave={ handleExit }
@@ -113,7 +113,7 @@ const Brochure = () => {
 					<div 
 						className={ `development satellite expandable ${turn === 'second' && 'expanded-satellite'}` } 
 						ref={ third } 
-						tabIndex="5"
+						tabIndex={ 5 }
 						style={{ backgroundImage: `url(${devPic})` }}
 						onMouseEnter={ handleEnter }
 						onMouseLeave={ handleExit }

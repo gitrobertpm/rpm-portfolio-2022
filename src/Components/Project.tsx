@@ -1,13 +1,27 @@
 
 /* Main dependency imports */
 import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown';
 
-const Project = (props) => {
+interface ProjectPropTypes {
+	isEven: boolean;
+	id: number | string;
+	title: string;
+	shortDescription: string;
+	imgs: string[];
+	links: {
+		name: string;
+		url: string;
+	}[],
+	stack: string[];
+	description: string[];
+}
+
+const Project = (props: ProjectPropTypes): JSX.Element => {
 
 	/* Set state for modal open state */
-	const [modOpen, setModOpen] = useState(false);
+	const [modOpen, setModOpen] = useState<boolean>(false);
 
 	/* When page renders add target="_blank" to links in description text so users aren't redirected away from portfolio */
 	useEffect(() => [...document.querySelectorAll('.project-description a')].forEach(a => a.setAttribute('target', '_blank')), []);
@@ -64,23 +78,6 @@ const Project = (props) => {
 			</div>
 		</div>
 	); 
-};
-
-Project.propTypes = {
-	isEven: PropTypes.bool,
-	id: PropTypes.oneOfType([
-		PropTypes.number,
-		PropTypes.string
-	]),
-	title: PropTypes.string,
-	shortDescription: PropTypes.string,
-	imgs: PropTypes.arrayOf(PropTypes.string),
-	links: PropTypes.arrayOf(PropTypes.exact({
-		name: PropTypes.string,
-		url: PropTypes.string
-	})),
-	stack: PropTypes.arrayOf(PropTypes.string),
-	description: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default Project;

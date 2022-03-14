@@ -1,17 +1,16 @@
 
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const Imgs = (props) => {
+interface ChildrenTypes {
+	children: React.ReactNode
+}
+
+const Imgs = (props: ChildrenTypes) => {
 	return (
 		<div className="mod-img-wrap">
 			{ props.children }
 		</div>
 	);
-};
-
-Imgs.propTypes = {
-	children: PropTypes.element
 };
 
 const Modal = () => {

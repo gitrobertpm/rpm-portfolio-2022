@@ -16,6 +16,10 @@
   .desert-island-btn {
     left: 25px;
   }
+
+  .quote-display .bio-heading {
+    max-width: 350px
+  }
 }
 
 @media screen and (min-width: 768px) {

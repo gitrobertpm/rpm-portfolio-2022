@@ -568,3 +568,7 @@
 .logo-box {
   width: 100%;
 }
+
+.thank-you-heading {
+  max-width: 850px;
+}

@@ -1,23 +1,27 @@
 module.exports = {
-	'env': {
-		'browser': true,
-		'es2021': true
-	},
-	'extends': [
-		'eslint:recommended',
-		'plugin:react/recommended'
+	parser:  '@typescript-eslint/parser',  // Specifies the ESLint parser
+	extends: [
+		'plugin:react/recommended',  // Uses the recommended rules from @eslint-plugin-react
+		'plugin:@typescript-eslint/recommended',  // Uses the recommended rules from @typescript-eslint/eslint-plugin
 	],
-	'parserOptions': {
-		'ecmaFeatures': {
-			'jsx': true
+	parserOptions:  {
+		ecmaVersion:  'latest',  // Allows for the parsing of modern ECMAScript features
+		sourceType:  'module',  // Allows for the use of imports
+		ecmaFeatures:  {
+			jsx:  true,  // Allows for the parsing of JSX
+		}
+	},
+	settings:  {
+		react:  {
+			version:  'detect',  // Tells eslint-plugin-react to automatically detect the version of React to use
 		},
-		'ecmaVersion': 'latest',
-		'sourceType': 'module'
 	},
 	'plugins': [
 		'react'
 	],
 	'rules': {
+		// Place to specify ESLint rules. Can be used to overwrite rules specified from the extended configs
+		// e.g. "@typescript-eslint/explicit-function-return-type": "off",
 		'indent': [
 			'error',
 			'tab'
@@ -31,5 +35,9 @@ module.exports = {
 			'error',
 			'always'
 		]
-	}
+	},
+	'env': {
+		'browser': true,
+		'es2021': true
+	},
 };

@@ -1,8 +1,21 @@
 
 import React from 'react';
-import PropTypes, { arrayOf } from 'prop-types';
 
-const ExpItem = (props) => {
+interface BulletProps {
+	heading: string;
+	points: string[];
+}
+
+interface ExpItemProps {
+	id: string | number;
+	date: string;
+	company: string;
+	title: string;
+	description: string;
+	bullets: BulletProps | undefined;
+}
+
+const ExpItem = (props: ExpItemProps): JSX.Element => {
 
 	return (
 		<div className="exp-item">
@@ -19,7 +32,7 @@ const ExpItem = (props) => {
 					<ul className="exp-bullets-points">
 
 						{
-							props.bullets.points.map((point, i) => {
+							props.bullets.points.map((point: string, i: number) => {
 								return (
 									<li className="exp-bullets-point" key={ `${i}-${props.title}-${point}` }>{ point }</li>
 								); 
@@ -31,21 +44,6 @@ const ExpItem = (props) => {
 			}
 		</div>
 	); 
-};
-
-ExpItem.propTypes = {
-	id: PropTypes.oneOfType([
-		PropTypes.string,
-		PropTypes.number
-	]),
-	date: PropTypes.string,
-	company: PropTypes.string,
-	title: PropTypes.string,
-	description: PropTypes.string,
-	bullets: PropTypes.exact({
-		heading: PropTypes.string,
-		points: arrayOf(PropTypes.string)
-	}),
 };
 
 export default ExpItem;

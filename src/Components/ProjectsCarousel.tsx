@@ -11,13 +11,13 @@ import projectsData from '../data/projects.json';
 /* Img imports */
 import imgObj from '../data/projImgRef';
 
-const ProjectsCarousel = () => {
+const ProjectsCarousel = (): JSX.Element => {
 
-	const projectMenuElement = useRef(null);
+	const projectMenuElement = useRef<null | HTMLDivElement>(null);
 
-	const [currentProjectPath, setCurrentProjectPath] = useState('bsn-sports-(coming-soon)');
-	const [left, setLeft] = useState(40);
-	const [isEven, setIsEven] = useState(false);
+	const [currentProjectPath, setCurrentProjectPath] = useState<string>('bsn-sports-(coming-soon)');
+	const [left, setLeft] = useState<number | string>(40);
+	const [isEven, setIsEven] = useState<boolean>(false);
 
 	const navigateTo = useNavigate();
 	const location = useLocation();
@@ -25,7 +25,7 @@ const ProjectsCarousel = () => {
 	const projectPathname = pathname.slice(pathname.lastIndexOf('/') + 1);
 
 	// Convert title to pathlike strings
-	const pathify = (str) => str.trim().toLowerCase().replaceAll(' ', '-');
+	const pathify = (str: string) => str.trim().toLowerCase().replaceAll(' ', '-');
 
 	// Collection of project titles in pathlike form
 	const projectPaths = projectsData.map((proj) => pathify(proj.title));
@@ -37,8 +37,12 @@ const ProjectsCarousel = () => {
 	const scroller = () => window.scrollTo(0, 0);
 
 	// Helper functions to get width of menu and to get the number of links displayed in menu at current width
-	const getWidth = (el) => +window.getComputedStyle(el, null).getPropertyValue('width').slice(0, 3);
-	// const getItemsDisplayed = (width) => width / 66;
+	const getWidth = (el: Element | null): number => {
+		if (el) {
+			return +window.getComputedStyle(el, null).getPropertyValue('width').slice(0, 3);
+		}
+		return 0;
+	};
 
 	// Update display
 	useEffect(() => {
@@ -123,7 +127,7 @@ const ProjectsCarousel = () => {
 							description={currentProject.description}
 							stack={currentProject.stack}
 							links={currentProject.links}
-							imgs={currentProject.imgKey && imgObj[currentProject.imgKey]}
+							imgs={currentProject.imgKey ? imgObj[currentProject.imgKey] : []}
 						/> :
 						<Navigate to="/notfound" replace />
 				}

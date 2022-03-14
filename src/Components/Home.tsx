@@ -5,19 +5,17 @@ import { Link } from 'react-router-dom';
 
 /* Component imports */
 import Brochure from './Brochure';
-// import Projects from './Projects';
 
 /* Image imports */
 import profilePic from '../img/profile-pic.jpg';
 import myLogo from '../img/myLogo.svg';
-// import { ReactComponent as myLogo } from '../img/myLogo.svg';
 import jsImg from '../img/icons/js.png';
 import mail from '../img/icons/mail.png';
 import github from '../img/icons/gh.png';
 import linkedin from '../img/icons/li.png';
 
 /* Landing page and root header */
-const Home = () => {
+const Home = (): JSX.Element => {
 
 	return (
 		<React.Fragment>
@@ -35,7 +33,6 @@ const Home = () => {
 
 					<div className="home-header-logo-box">
 						<img className="my-logo home-header-logo" src={ myLogo } alt="My Logo" />
-						{/* <myLogo className="my-logo home-header-logo" /> */}
 					</div>
 
 					<div className="home-title-box">

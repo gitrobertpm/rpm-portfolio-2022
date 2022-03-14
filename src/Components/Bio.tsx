@@ -9,16 +9,21 @@ import dIslands from '../data/desertIsl.json';
 /* Img imports */
 import myLogo from '../img/myLogo.svg';
 
-const Bio = () => {
+const Bio = (): JSX.Element => {
 
 	// Helper to get a random index from an array
-	const ranIndy = (arr) => Math.floor(Math.random() * arr.length);
+	const ranIndy = (arrLength: number): number => Math.floor(Math.random() * arrLength);
+
+	interface Quote {
+		quote: string;
+		citation: string;
+	}
 
 	// Handle quotes
-	const [quotesToPullFrom, setQuotesToPullFrom] = useState([...quotes]);
-	const [curQuote, setCurQuote] = useState('');
-	const [quoteCounter, setQuoteCounter] = useState(0);
-	const [quotesIsOpen, setQuotesIsOpen] = useState(0);
+	const [quotesToPullFrom, setQuotesToPullFrom] = useState<Quote[]>([...quotes]);
+	const [curQuote, setCurQuote] = useState<Quote>(quotes[0]);
+	const [quoteCounter, setQuoteCounter] = useState<number>(0);
+	const [quotesIsOpen, setQuotesIsOpen] = useState<boolean>(false);
 
 	const handleQuoteOpen = () => setQuotesIsOpen(!quotesIsOpen);
 
@@ -30,7 +35,7 @@ const Bio = () => {
 			newQuote = quotesToPullFrom.splice(0, 1)[0];
 			setQuoteCounter(quoteCounter + 1);
 		} else {
-			const i = ranIndy(quotesToPullFrom);
+			const i = ranIndy(quotesToPullFrom.length);
 			newQuote = quotesToPullFrom.splice(i, 1)[0];
 		}
 
@@ -48,10 +53,15 @@ const Bio = () => {
 	const { quote } = curQuote;
 	const { citation } = curQuote;
 
+	interface DesertIsl {
+		category: string;
+		details: string;
+		selections: string[]
+	}
 	
 	// Handle Desert Island
-	const [curDesertIsland, setCurDesertIsland] = useState('');
-	const [desertIslIsOpen, setDesertIslIsOpen] = useState(0);
+	const [curDesertIsland, setCurDesertIsland] = useState<DesertIsl>(dIslands[0]);
+	const [desertIslIsOpen, setDesertIslIsOpen] = useState<boolean>(false);
 
 	const handleDesertIslOpen = () => setDesertIslIsOpen(!desertIslIsOpen);
 
@@ -60,7 +70,7 @@ const Bio = () => {
 		const dIslCategories = dIslands.map((dIsl) => dIsl.category);
 		const curDesIslIndy = dIslCategories.indexOf(curDesertIsland.category);
 		
-		if (curDesertIsland === '' || curDesIslIndy === dIslCategories.length - 1) {
+		if (curDesIslIndy === dIslCategories.length - 1) {
 			return setCurDesertIsland(dIslands[0]);
 		}
 
@@ -75,10 +85,6 @@ const Bio = () => {
 	useEffect(() => {
 		if (quoteCounter === 0) {
 			updateQuote();
-		}
-
-		if (curDesertIsland === '') {
-			updateDesertIsland();
 		}
 	});
 

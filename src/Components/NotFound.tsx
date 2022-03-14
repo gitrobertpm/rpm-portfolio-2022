@@ -4,7 +4,7 @@ import React from 'react';
 /* Image imports */
 import myLogo from '../img/myLogo.svg';
 
-const NotFound = () => {
+const NotFound = (): JSX.Element => {
 	return (
 		<div className="not-found">
 
