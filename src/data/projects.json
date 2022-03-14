@@ -279,6 +279,7 @@
     ],
     "stack": [
       "Create React App with BrowserRouter",
+      "Typescript, ESLint, and Prettier",
       "Functional components and hooks for state and lifecycle events",
       "JSON for modularization and convenient data tracking and updating",
       "Custom, responsive, mobile-first CSS with grid and flexbox layout",
