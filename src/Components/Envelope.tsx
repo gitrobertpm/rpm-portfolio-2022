@@ -14,13 +14,13 @@ const MyLogo = () => {
 				height="45" 
 				rx="2" 
 				ry="2" 
-				style={{fill: 'none', stroke: 'rgb' + (245,245,245),strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
+				style={{fill: 'none', stroke: 'rgb' + (245),strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
 			/>
 
 			<path 
 				className="siteMapSvgPath" 
 				d="M2,2L37.58,24.12a2.64,2.64,0,0,0,2.82,0L75,2" 
-				style={{fill: 'none', stroke: 'rgb' + (245,245,245),strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
+				style={{fill: 'none', stroke: 'rgb' + (245),strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
 			/>
 
 			<line 
@@ -29,7 +29,7 @@ const MyLogo = () => {
 				y1="46.5" 
 				x2="28" 
 				y2="19" 
-				style={{fill: 'none', stroke: 'rgb' + (245,245,245), strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
+				style={{fill: 'none', stroke: 'rgb' + (245), strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
 			/>
 
 			<line 
@@ -38,7 +38,7 @@ const MyLogo = () => {
 				y1="46.5" 
 				x2="50" 
 				y2="19" 
-				style={{fill: 'none', stroke: 'rgb' + (245,245,245), strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
+				style={{fill: 'none', stroke: 'rgb' + (245), strokeMiterlimit: 10, strokeWidth: 3 + 'px'}} 
 			/>
 
 		</svg>

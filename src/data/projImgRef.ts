@@ -37,8 +37,12 @@ import pt162 from '../img/projects/port-2016-2.PNG';
 import pt163 from '../img/projects/port-2016-3.PNG';
 import pt17 from '../img/projects/port-2017.PNG';
 
+interface ImgObjTypes {
+	[key: string]: string[];
+}
+
 /* Connect imported images with their respective projects */
-const imgObj = {
+const imgObj: ImgObjTypes = {
 	bsn: [bsnUd, bsnAd, bsnMtswP, bsnMtswCc, bsnMtswAs, bsnMtswAp],
 	port: [portHome, portHoMo],
 	ts: [tsHome, tsTruths, tsTruth, tsSettings],
