@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "outDir": "dist", // Output location
     "target": "es2021", // Specify ECMAScript target version
     "lib": [
       "dom",
@@ -29,6 +30,5 @@
   "include": [
     "src/**/*"
   ],
-  "exclude": ["node_modules", "build"],
-  "files": ["src/index.tsx"]
+  "exclude": ["node_modules", "build", "dist"]
 }
