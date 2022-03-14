@@ -7,7 +7,7 @@ import propsData from '../data/props.json';
 /* Img imports */
 import myLogo from '../img/myLogo.svg';
 
-const Props = () => {
+const Props = (): JSX.Element => {
 	return (
 		<div className="about-container">
 			<div className="props">
@@ -31,7 +31,7 @@ const Props = () => {
 				}
 
 				<div className="logo-box">
-					<img className="my-logo" src={myLogo} alt="My Logo" />
+					<img className="my-logo" src={ myLogo } alt="My Logo" />
 				</div>
         
 			</div>

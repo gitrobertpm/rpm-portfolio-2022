@@ -10,7 +10,7 @@ import experienceData from '../data/experience.json';
 /* Image imports */
 import myLogo from '../img/myLogo.svg';
 
-const Experience = () => {
+const Experience = (): JSX.Element => {
 	return (
 		<div className="about-container">
 			<div className="experience">
