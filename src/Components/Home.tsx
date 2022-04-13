@@ -36,7 +36,7 @@ const Home = (): JSX.Element => {
 					</div>
 
 					<div className="home-title-box">
-						<h2 className="rainbow animate__animated animate__zoomIn customDuration second"><code>Frontend Developer</code></h2>
+						<h2 className="rainbow animate__animated animate__zoomIn customDuration second"><code>Front-end Developer</code></h2>
 						<img className="p-img main-js-logo" src={jsImg} alt="JavaScript icon" />
 						<h5 className="rainbow animate__animated animate__zoomIn customDuration second"><code>with React and full stack experience</code></h5>
 					</div>

@@ -99,7 +99,7 @@ const Brochure = (): JSX.Element => {
 						onMouseEnter={ handleEnter }
 						onMouseLeave={ handleExit }
 					>
-						<h3>Design</h3>
+						<h3>Tao of Design</h3>
 						<h4>A good web UI is...</h4>
 						<ul className={ `${turn === 'third' && 'expanded-ul'}` }>
 							<li><GreenCheck handle={ turn } turn="third" icon="🎨" timer={gct}/> Mobile first and Responsive</li>
@@ -118,7 +118,7 @@ const Brochure = (): JSX.Element => {
 						onMouseEnter={ handleEnter }
 						onMouseLeave={ handleExit }
 					>
-						<h3>Dev</h3>
+						<h3>Dev Goals</h3>
 						<h4>Process is paramount</h4>
 						<ul className={ `${turn === 'second' && 'expanded-ul'}` }>
 							{/* <li><GreenCheck handle={ turn } turn="second" icon="⚙️" timer={gct}/> Package management, tree shaking, and bundling</li> */}
