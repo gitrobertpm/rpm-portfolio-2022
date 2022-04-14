@@ -39,3 +39,15 @@ Details:
 4/12/2022
 Branch/Issue: Improve landing/home page
 Details:
+
+1. Improve animations:
+ - Timing
+ - Semantics
+ - Add SVG animation
+
+2. Brighten up landing page
+
+3. Rework brochure layout:
+ - Less busy
+ - More of a carousel 
+ - More modern, maybe full page slides
