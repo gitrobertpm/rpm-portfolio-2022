@@ -30,12 +30,18 @@ Details:
 
 3. Backdrop filter for "Me" and "Projects" cards on home page
 
+DONE: March, 2022
+
 
 3/5/2022
 Branch/Issue: TypeScript
-Details:
+Details: Added TS to all used React components.
+
+DONE: March, 2022
 
 
 4/13/2022
 Branch/Issue: Update/Experience
 Details: Update wording in Experience file
+
+DONE: 4/15/2022
