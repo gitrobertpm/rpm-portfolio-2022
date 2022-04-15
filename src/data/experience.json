@@ -2,16 +2,14 @@
   "id": 3,
   "date": "9/2021 - 1/2022",
   "company": "Unleashed Technologies",
-  "title": "Frontend React Developer - Contract position",
-  "description": "Landed my first real web developer position.",
+  "title": "Frontend React Developer - Contract - Remote",
+  "description": "Landed my first real web developer position. Just a short contract role that was over too soon. But it was fun, I learned a lot, and I'm ready for whatever's next.",
   "bullets": {
     "heading": "Current Job Stats",
     "points": [
-      "Worked on a frontend team to debug, code review and add features to a huge sports related ecommerce app with over 12,000 commits and tens of thousands of lines of code.",
-      "Frontend stack:  React, React Query,  Material UI, Typescript",
-      "Backend stack: PHP, Symfony, Twig, SQL", 
-      "Dev env: Continuous integration with Docker, Webpack, JSLint, Cypress, GitLab",
-      "Remote collaboration: Jira, Slack, Outlook"
+      "As part of an Agile front-end team, I worked closely with clients and the back end team, participating in daily standups/scrum meetings to help define deliverables and report on progress.",
+      "Programmed React components and Cypress tests in a huge eCommerce app.",
+      "Worked on assigned Jira tickets to complete bug fixes, code reviews and new features."
     ]
   }
 },
@@ -19,19 +17,15 @@
     "id": 2,
     "date": "2/2017 - 6/2021",
     "company": "Treehouse",
-    "title": "Frontend and Fullstack JavaScript Student Success Specialist",
-    "description": "Promoted from contract to part time, then to full time, and from frontend to the Full Stack JavaScript Techdegree.",
+    "title": "Front-end and Full Stack JavaScript Developer and Student Success Specialist - W2 - Remote",
+    "description": "Promoted from contract to part time, then to full time, and from front end to the illustrious Full Stack JavaScript Techdegree.",
     "bullets": {
       "heading": "Current Job Stats",
       "points": [
-        "Collaboratively designed and created the software, programs, projects, and supporting material for the Front End and Full Stack JavaScript Techdegrees (online web dev bootcamps).",
-        "4,600+ frontend and fullstack student projects reviewed and evaluated.",
-        "Debugged thousands of projects and mentored hundreds of students with live, real-time online support.", 
-        "Created and experimented with new programs to promote student success and increase conversion and retention rates.",
-        "Created, curated and documented team processes.",
-        "Reviewed, tracked and reported on analytics.",
-        "Help interview, hire and train new team members.",
-        "Use GitHub, Mode, JIRA, Confluence, AWS s3 and Zoom."
+        "Equal parts developer, mentor, and customer support specialist, I oversaw the Front-end and Full Stack JavaScript Techdegrees (online web dev bootcamps).",
+        "Helped write and review relevant software and instructional material, including educational websites and apps that I programmed, styled and debugged.",
+        "Evaluated 4,600+ student projects and mentored hundreds of students through learning, programming, debugging, impostor syndrome and the job search.", 
+        "Created, curated and documented team processes."
       ]
     }
   },
