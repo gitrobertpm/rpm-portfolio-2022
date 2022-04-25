@@ -51,3 +51,5 @@ Details:
  - Less busy
  - More of a carousel 
  - More modern, maybe full page slides
+
+ DONE: 4-24-2022

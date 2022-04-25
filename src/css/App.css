@@ -37,8 +37,10 @@
   padding-bottom: 75px;
   background-color: #282c34;
   background-image: url('../img/wallpaper.png');
+  background-position: 185px 35px;
   background-repeat: repeat;
   transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .App-header-wrap {
@@ -54,7 +56,9 @@
 }
 
 .App-header h1 {
-  text-shadow: 0 1px 0 rgba(0, 191, 255, 0.9);
+  color: rgba(240, 255, 255, 0.9);
+  text-shadow: 0 1px 0 rgba(0, 191, 255, 0.7);
+  margin: 15px auto;
 }
 
 .App-header h2 {
@@ -72,8 +76,23 @@
   font-size: 1rem;
 }
 
-.App-header-wrap h5 code {
+.App-header-wrap h6 {
   font-size: 1rem;
+}
+
+.home-name-box h3 {
+  color: rgba(240, 255, 255, 0.9);
+  font-weight: lighter;
+  text-shadow: 0 1px 0 rgba(0, 191, 255, 0.5);
+  margin: 10px auto;
+}
+
+.home-name-box h6 {
+  color: rgba(240, 255, 255, 0.9);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.75rem;
+  text-shadow: 0 1px 0 rgba(0, 191, 255, 0.5);
+  margin: 10px auto;
 }
 
 .header-contact-link-box {
@@ -90,12 +109,25 @@
   width: 33px;
   height: 33px;
   margin: auto;
+  filter: drop-shadow(0 1px 0 rgba(0, 191, 255, 0.5));
 }
 
 .header-contact-link-box a:nth-of-type(1) {
   margin-top: 5px;
   height: 25px;
   padding-bottom: 5px;
+  transform: rotateZ(-2deg);
+}
+
+.header-contact-link-box a:nth-of-type(2) {
+  width: 27px;
+  height: 27px;
+  padding-top: 10px;
+  margin-left: 10px;
+}
+
+.header-contact-link-box a:nth-of-type(3) {
+  transform: rotateZ(1deg);
 }
 
 .header-contact-link-box a:hover {
@@ -105,6 +137,112 @@
 
 .header-contact-link-box img {
   width: 100%;
+}
+
+.card-btn-box {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: calc(100% - 30px);
+  max-width: 242px;
+  margin: auto;
+}
+
+.card-btn-box button {
+  cursor: pointer;
+  width: 42px;
+  height: 5px;
+  border: none;
+  background-color: rgba(240, 255, 255, 0.9);
+  border-radius: 3px;
+  opacity: 0.5;
+  transition: all 0.4s ease-in-out;
+}
+
+.card-btn-box .active-btn {
+  opacity: 1;
+  filter: drop-shadow(0px 1px 0px rgba(0, 191, 255, 0.7));
+}
+
+.key-card-box {
+  width: calc(100% - 20px);
+  max-width: 960px;
+  margin: 5px auto;
+}
+
+.key-card-box .key-card {
+  display: none;
+  position: relative;
+  color: rgba(240, 255, 255, 0.9);
+  padding: 15px;
+  margin: 10px auto;
+  border: 1px solid red;
+  border: 1px solid transparent;
+  border: 1px solid rgba(0, 0, 10, 0.1);
+  backdrop-filter: blur(5px);
+  transition: all 0.4s ease-in-out;
+}
+
+.key-card-box .current-card {
+  display: block;
+}
+
+.key-card h3 {
+  text-shadow: 0px 1px 0px rgba(0, 191, 255, 0.5);
+}
+
+.key-card ul {
+  font-family: 'Nunito', sans-serif;
+  text-align: left;
+  margin-top: 35px;
+}
+
+.key-card li {
+  line-height: 26px;
+  font-size: 17px;
+}
+
+.key-card li .key-card-icon {
+  margin-right: 5px;
+}
+
+.key-card-1 li .key-card-icon {
+  filter: hue-rotate(90deg);
+}
+
+.key-card-2 li .key-card-icon {
+  filter: hue-rotate(225deg);
+}
+
+.key-card-3 li .key-card-icon {
+  filter: brightness(0.8) saturate(0.8) hue-rotate(315deg);
+}
+
+.key-card li a {
+  font-size: 1.1em;
+  color: rgba(0, 191, 255, 0.9);
+  margin: 0;
+  padding: 0;
+}
+
+.key-card li a:hover {
+  color: tomato;
+}
+
+.key-card-image {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: block;
+  width: 100%;
+  height: 75px;
+  background-size: auto 100%;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.key-card-3 .key-card-image {
+  opacity: 0.4;
 }
 
 .rainbow {
@@ -214,6 +352,10 @@
 
 .third {
   animation-delay: 1.5s;
+}
+
+.fourth {
+  animation-delay: 2s;
 }
 
 .customDuration {
