@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 /* Component imports */
 import Nav from './Components/Nav';
 import Home from './Components/Home';
+import NewHome from './Components/NewHome';
 import About from './Components/About';
 import ProjectsCarousel from './Components/ProjectsCarousel';
 import NotFound from './Components/NotFound';
@@ -36,7 +37,8 @@ const App = () => {
 				<Nav />
 				<Routes>
 					<Route path="/" element={ <Navigate to="/home" replace /> } />
-					<Route path="/home" element={ <Home /> } />
+					<Route path="/home" element={ <NewHome /> } />
+					<Route path="/oldhome" element={ <Home /> } />
 
 					<Route path="/about/:id" element={ <About /> } />
 					<Route path="/about" element={ <Navigate to="/about/bio" replace /> } />

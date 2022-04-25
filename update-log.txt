@@ -33,11 +33,14 @@ Details:
 DONE: March, 2022
 
 
+
 3/5/2022
 Branch/Issue: TypeScript
+
 Details: Added TS to all used React components.
 
 DONE: March, 2022
+
 
 
 4/13/2022
@@ -45,3 +48,25 @@ Branch/Issue: Update/Experience
 Details: Update wording in Experience file
 
 DONE: 4/15/2022
+
+
+
+4/12/2022
+Branch/Issue: Improve landing/home page
+Details:
+
+1. Improve animations:
+ - Timing
+ - Semantics
+ - Add SVG animation
+
+2. Brighten up landing page
+
+3. Rework brochure layout:
+ - Less busy
+ - More of a carousel 
+ - More modern, maybe full page slides
+
+ DONE: 4-24-2022
+
+
