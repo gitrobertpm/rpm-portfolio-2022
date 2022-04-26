@@ -15,7 +15,7 @@ const ProjectsCarousel = (): JSX.Element => {
 
 	const projectMenuElement = useRef<null | HTMLDivElement>(null);
 
-	const [currentProjectPath, setCurrentProjectPath] = useState<string>('bsn-sports-(coming-soon)');
+	const [currentProjectPath, setCurrentProjectPath] = useState<string>('bsn-sports');
 	const [left, setLeft] = useState<number | string>(40);
 	const [isEven, setIsEven] = useState<boolean>(false);
 

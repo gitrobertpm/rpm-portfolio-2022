@@ -54,7 +54,7 @@ const cardText: CardTypes = {
 		'bullets': [
 			'Modular and extensible code.',
 			'Type checking and test driving.',
-			'Version control and Agile methods',			
+			'Version control and Agile methods.',			
 			'Secure and responsible web creations.',
 		],
 		'icon': '⚙️',

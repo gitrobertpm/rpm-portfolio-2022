@@ -1,13 +1,12 @@
 [
   {
     "id": 0,
-    "title": "BSN Sports (Coming Soon)",
-    "shortDescription": "I worked on the frontend team that built this sports related Ecommerce application.",
+    "title": "BSN Sports",
+    "shortDescription": "As a dev on the front end team that built this sports related eCommerce application, I programmed React components and completed bug-fixes, code reviews, and new feature requests.",
     "description": [
-      "This sports related Ecommerce application provides a platform for thousands of school and community sports teams to custom design and order sporting equipment and uniforms for their teams.",
+      "This sports related eCommerce application provides a platform for thousands of school and community sports teams to custom design and order sporting equipment and uniforms for their teams.",
       "Team managers and coaches can create accounts for their teams, generate custom designs and custom gear and uniforms, and provide links that parents and players can use to order what they need.",
-      "This is to be a new and improved replacement for [the current app found here](https://www.bsnsports.com/).",
-      "This thing is a beast: Over 12,000 commits, over 2,100 Jira tickets, over tens of thousands of lines of code, and nearly two years in development"
+      "This thing is a beast: Over 12,000 commits, over 2,100 Jira tickets, over tens of thousands of lines of code, and nearly two years in development."
       
     ],
     "stack": [
@@ -30,7 +29,7 @@
     ],
     "links": [
       {
-        "name": "Old version",
+        "name": "BSN Sports",
         "url": "https://www.bsnsports.com"
       }
     ],
