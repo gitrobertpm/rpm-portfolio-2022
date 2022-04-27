@@ -98,9 +98,7 @@ const Bio = (): JSX.Element => {
 					<p>{`I'll be a developer for the rest of my life because it's not only a career, it's a passion. The joy of solving a tricky bugfix or code challenge is downright addictive. And nothing gets me in the zone like working on some project I'm into. That's when I lose track of time and the world falls away and all there is is the code.`}</p>
 					<br />
 
-					<p>{`But I didn't start in web development.`}</p>
-
-					<p>{`Worked in construction first. I loved fixing things and building things and I was good at it. But after a few years, I realized I couldn't see myself doing it forever.`}</p>
+					<p>{`But I didn't start in web development. Worked in construction first. I loved fixing things and building things and I was good at it. But after a few years, I realized I couldn't see myself doing it forever.`}</p>
 					<br />
 
 					<p>{`Bartending was next. I loved handling the rush and putting smiles on people's faces and I was good at it. But again, I wasn't sure if I wanted to do it forever.`}</p>
