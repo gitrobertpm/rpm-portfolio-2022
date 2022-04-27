@@ -15,6 +15,10 @@ const Experience = (): JSX.Element => {
 		<div className="about-container">
 			<div className="experience">
 
+				<div className="props-txt-box">
+					<p className="props-txt">{`Nearly six years professional experience building websites and apps. Mostly front end, programming and styling user interfaces with JS, React and CSS.`}</p>
+				</div>
+
 				<div className="exp-item-container">
 
 					{
