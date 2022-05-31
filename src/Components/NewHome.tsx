@@ -154,7 +154,7 @@ const NewHome = (): JSX.Element => {
 				setCardClass('animate__backInRight');
 			}, 500);
 			
-		}, 7000);
+		}, 7300);
 		return () => clearInterval(interval);
 	});
 
