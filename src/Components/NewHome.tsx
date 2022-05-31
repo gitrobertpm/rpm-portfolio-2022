@@ -95,11 +95,14 @@ interface KeyCardPropsTypes {
 }
 
 const KeyCard = (props: KeyCardPropsTypes): JSX.Element => {
+	const withOverlay = { backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.99)), url(${props.cardText.imgUrl})` };
+	const withoutOverlay = { backgroundImage: `url(${props.cardText.imgUrl})` };
+
 	return (
 		<div className={`key-card animate__animated customDuration ${props.cardClass}`}>
 			{
 				props.cardText.imgUrl && 
-				<span className="key-card-image" style={{ backgroundImage: `url(${props.cardText.imgUrl})` }}></span>
+				<span className="key-card-image" style={window.innerWidth <= 510 ? withOverlay : props.cardText.imgUrl !== yyPic ? withOverlay : withoutOverlay}></span>
 			}
 			
 			<h3>{props.cardText.title}</h3>
@@ -151,7 +154,7 @@ const NewHome = (): JSX.Element => {
 				setCardClass('animate__backInRight');
 			}, 500);
 			
-		}, 9000);
+		}, 7000);
 		return () => clearInterval(interval);
 	});
 

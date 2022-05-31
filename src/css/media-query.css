@@ -5,10 +5,6 @@
     margin-top: 15px;
   }
 
-  /* .key-card ul {
-    margin-bottom: 0;
-  } */
-
   .key-card-image {
     top: 0px;
     right: 0px;
@@ -16,13 +12,20 @@
     width: 50%;
     height: calc(100%);
     background-repeat: no-repeat;
-    background-size: auto 100%;
-    background-position: right top;
-    opacity: 0.3;
+    background-size: cover;
+    background-position: left top;
+    border-bottom: none;
+    border-left: 2px solid rgba(240, 255, 255, 0.9);
   }
-  
-  .key-card-3 .key-card-image {
-    opacity: 0.5;
+
+  .key-card-4 .key-card-image {
+    background-position: right top;
+    background-size: auto 100%;
+    border-left: none;
+  }
+
+  .key-card-5 .key-card-image {
+    background-size: cover;
   }
 
   .about-header{
@@ -96,7 +99,6 @@
 
   .key-card-1 .key-card-image {
     background-size: 100% auto;
-    background-position: left -42px;
   }
 
   .key-card-2 .key-card-image {
@@ -117,6 +119,7 @@
   }
 
   .key-card-5 .key-card-image {
+    background-size: auto 100%;
     background-position: left top;
     background-repeat: repeat-x;
   }
