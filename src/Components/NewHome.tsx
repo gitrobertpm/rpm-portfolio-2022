@@ -52,10 +52,12 @@ const cardText: CardTypes = {
 	'dev': {
 		'title': 'Development Concerns',
 		'bullets': [
-			'Modular and extensible code.',
+			'Linting and formatting.',
+			'DRY, modular and extensible.',
 			'Type checking and test driving.',
 			'Version control and Agile methods.',			
 			'Secure and responsible web creations.',
+			'Modern, fast and performant applications.'
 		],
 		'icon': '⚙️',
 		'imgUrl': devPic
@@ -95,7 +97,8 @@ interface KeyCardPropsTypes {
 }
 
 const KeyCard = (props: KeyCardPropsTypes): JSX.Element => {
-	const withOverlay = { backgroundImage: `linear-gradient(to bottom, rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.99)), url(${props.cardText.imgUrl})` };
+	const direction = window.innerWidth <= 510 ? 'to bottom' : 'to left';
+	const withOverlay = { backgroundImage: `linear-gradient(${direction}, rgba(0, 0, 50, 0.3), rgba(0, 0, 50, 0.57) 20%, rgba(0, 0, 50, 0.7) 40%, rgba(0, 0, 50, 0.99) 90%), url(${props.cardText.imgUrl})` };
 	const withoutOverlay = { backgroundImage: `url(${props.cardText.imgUrl})` };
 
 	return (
@@ -170,14 +173,6 @@ const NewHome = (): JSX.Element => {
 		}, 500);
 	};
 
-	const handleEnter = (e: React.MouseEvent<HTMLDivElement>): void => {
-		console.log('e: ', e);
-	};
-
-	const handleExit = (e: React.MouseEvent<HTMLDivElement>): void => {
-		console.log('e: ', e);
-	};
-
 	return (
 		<>
 			<div className="curtain"></div>	
@@ -212,7 +207,7 @@ const NewHome = (): JSX.Element => {
 					}
 				</div>
 
-				<div className="key-card-box" onMouseEnter={ handleEnter } onMouseLeave={ handleExit }>
+				<div className="key-card-box">
 					{
 						cardKeys.map((key, i) => {
 							return (
