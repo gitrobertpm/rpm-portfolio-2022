@@ -145,6 +145,15 @@
   border-radius: 4px 4px 0 0;
 }
 
+.glance-display {
+  cursor: default;
+}
+
+.desert-island-display {
+  max-height: calc(100vh - 275px);
+  overflow-y: scroll;
+}
+
 .quote::before {
   position: absolute;
   margin-left: -10px;
@@ -172,8 +181,7 @@
   display: inline-block;
   vertical-align: top;
   text-transform: uppercase;
-  width: 69px;
-  margin: 0 5px 0 0;
+  margin: 15px 5px 0 0;
 }
 
 .di-details {
@@ -186,8 +194,14 @@
 }
 
 .di-selections {
-  font-family: cursive;
-  font-weight: lighter;
+  list-style: circle;
+  padding-left: 25px;
+  margin-top: 10px;
+}
+
+.di-selection {
+  line-height: 26px;
+  margin: 5px auto;
 }
 
 .about-menu {
@@ -234,7 +248,7 @@
   background: none;
 }
 
-.desert-island-heading {
+.quote-display .desert-island-heading {
   max-width: 200px;
 }
 
